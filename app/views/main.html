@@ -9,8 +9,8 @@
             <!-- When a link in the menu is clicked, we set the active variable -->
 
             <a href="#" class="home" ng-click="active='home'">Home</a>
-            <a href="#" class="projects" ng-click="active='projects'">Projects</a>
-            <a href="#" class="services" ng-click="active='services'">Services</a>
+            <a href="#" class="products" ng-click="active='products'">Products</a>
+            <a href="#" class="about" ng-click="active='about'">About</a>
             <a href="#" class="contact" ng-click="active='contact'">Contact</a>
         </nav>
 
@@ -18,8 +18,8 @@
              while ng-hide does the opposite. Because the active variable is not set
              initially, this will cause the first paragraph to be visible. -->
 
-        <p ng-hide="active">Please click a menu item</p>
-        <p ng-show="active">You chose <b>{{active}}</b></p>
+        <!--<p ng-hide="active">Please click a menu item</p>-->
+        <!--<p ng-show="active">You chose <b>{{active}}</b></p>-->
     </div>
   <h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3>
 </div>
@@ -31,51 +31,189 @@
         We encourage you to contact us regarding your experiences with the products and offer any suggestions or ideas you may have to add to the product line or improvements on an existing product.</p>
 </div>
 
+<hr/>
+
 <div class="row">
-    <div class="col-md-4">
-        <h3>Product 1</h3>
-        <img src="images/products/product-1.png" alt="" class="img-responsive"/>
-        <ul>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-        </ul>
-        <a href="#/builder" class="btn btn-primary">Build Your System</a>
+    <h1>Featured Systems</h1>
+    <hr/>
+    <div class="col-md-4 panel-primary">
+
+        <div class="panel panel-heading text-center">
+            <h5><strong>VIDEO VRA-RF VDS-1000</strong></h5>
+        </div>
+
+        <div class="row text-center">
+            <img src="images/products/product-1.png" alt="" class="img-responsive"/>
+        </div>
+
+        <div class="row">
+            <h3>Features</h3>
+            <ul>
+                <li>15” Bright LCD Color Display</li>
+                <li>Wireless Radio Remote Control</li>
+                <li>Action Colorful Cartoon Images</li>
+                <li>Dual-Arm Mounting Brackets</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <h3>Options</h3>
+            <ul>
+                <li>Center Box</li>
+                <li>Centering LCD Monitor</li>
+                <li>Sound Module</li>
+                <li>Rolling Stand</li>
+                <li>Installation Kit</li>
+                <li>Desktop Stand</li>
+                <li>Speaker Console</li>
+            </ul>
+        </div>
+
+        <div class="row text-center">
+            <a href="#/builder" class="btn btn-primary">Build Your System</a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h3>Product 2</h3>
-        <img src="images/products/product-2.png" alt="" class="img-responsive"/>
-        <ul>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-        </ul>
-        <a href="#builder" class="btn btn-primary">Build Your System</a>
+
+    <div class="col-md-4 panel-primary">
+        <div class="panel panel-heading text-center">
+            <h5><strong>3D TOY XM-5000 WIRELESS/WIRED</strong></h5>
+        </div>
+
+        <div class="row text-center">
+            <img src="images/products/product-2.png" alt="" class="img-responsive"/>
+        </div>
+
+        <div class="row">
+            <h3>Features</h3>
+            <ul>
+                <li>Compact Size –Large Display</li>
+                <li>Wireless/Wired Operation</li>
+                <li>Multiple LED Patterns</li>
+                <li>Multiple Sounds</li>
+                <li>Multiple Movement Patterns</li>
+                <li>Up to FOUR BOXES – QUAD</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <h3>Options</h3>
+            <ul>
+                <li>Center Box</li>
+                <li>Installation Kits</li>
+                <li>Corner Mounting Bracket</li>
+                <li>Dual Arm Mounting Bracket</li>
+                <li>IR Booster/Repeater</li>
+            </ul>
+        </div>
+
+        <div class="row text-center">
+            <a href="#/builder" class="btn btn-primary">Build Your System</a>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h3>Product 3</h3>
-        <img src="images/products/product-1.png" alt="" class="img-responsive"/>
-        <ul>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-            <li>Option</li>
-        </ul>
-        <a href="#/builder" class="btn btn-primary">Build Your System</a>
+
+    <div class="col-md-4 panel-primary">
+        <div class="panel panel-heading text-center">
+            <h5><strong>VIDEO VRA-IR VDS-1500</strong></h5>
+        </div>
+
+        <div class="row text-center">
+            <img src="images/products/product-1.png" alt="" class="img-responsive"/>
+        </div>
+
+        <div class="row">
+            <h3>Features</h3>
+            <ul>
+                <li>15” Bright LCD Color Display</li>
+                <li>Wireless Infra-RED Remote Control</li>
+                <li>Action Colorful Cartoon Images</li>
+                <li>Dual-Arm Mounting Brackets</li>
+                <li>Flashing LED /Sound Option</li>
+                <li>No Interference</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <h3>Options</h3>
+            <ul>
+                <li>Center Box</li>
+                <li>Centering LCD Monitor</li>
+                <li>Rolling Stand</li>
+                <li>Installation Kit</li>
+                <li>Speaker Console</li>
+            </ul>
+        </div>
+
+        <div class="row text-center">
+            <a href="#/builder" class="btn btn-primary">Build Your System</a>
+        </div>
     </div>
 </div>
 
+<hr/>
+
 <div class="row">
-    <div class="col-md-6">Other Products</div>
-    <div class="col-md-6">Legacy Products</div>
+    <div class="col-md-6">
+        <h1>Other Products</h1>
+    </div>
+    <di class="row">
+        <ul class="list-inline">
+            <li>VDS-500</li>
+            <li>LPA-400</li>
+            <li>VDS-510</li>
+            <li>LPA-440</li>
+            <li>LPC-200</li>
+            <li>LPA-400</li>
+            <li>LPV-300</li>
+            <li>VDS-510</li>
+            <li>LPC-200</li>
+            <li>(DUA-001)</li>
+            <li>(ROL-STAN)</li>
+            <li>(DSK-10)</li>
+            <li>CTR-MT</li>
+            <li>IRRT-200</li>
+            <li>INS-VID</li>
+            <li>INS-VID</li>
+            <li>VDO-SND</li>
+            <li>IRRT-200</li>
+            <li>SRM-1000</li>
+            <li>DOC-102</li>
+            <li>REM-5000</li>
+            <li>WT-1004</li>
+            <li>WT-1002</li>
+            <li>WT-7001</li>
+            <li>IR-SENS</li>
+            <li>CAB-09</li>
+            <li>ADA-012</li>
+            <li>ADA-013</li>
+            <li>ADA-022</li>
+            <li>XM-1001</li>
+            <li>HW-0012</li>
+        </ul>
+    </di>
 </div>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-6">
+        <h1>Legacy Products</h1>
+    </div>
+
+    <div class="row">
+        <ul class="list-inline">
+            <li>IR-7000 ANIMATRONIC VRA (INFRA-RED) WIRELESS REMOTE</li>
+            <li>TALK-BACK INTERCOM SYSTEM</li>
+            <li>XM-1000 WIRELESS VRA</li>
+            <li>WRS-500/WRS-500 QUAD WIRED VRA</li>
+        </ul>
+    </div>
+</div>
+
+<hr/>
 
 <footer>
     <div class="row">
-        <div class="col-md-6 pull-left">Copyright</div>
-        <div class="col-md-6 pull-right">small menu</div>
+        <div class="col-md-6 pull-left">Copyright © 2014 - Pehratek Products</div>
     </div>
 </footer>
 
