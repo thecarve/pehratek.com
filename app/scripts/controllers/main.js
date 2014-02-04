@@ -76,7 +76,7 @@ angular.module('pehratekcomApp')
             id: 5,
             name: 'product6',
             title: 'Product 6',
-            category: 'centering-box',
+            category: 'sound-module',
             price: 1700,
             imageUrl: [
                 'images/products/product6/1.png',
