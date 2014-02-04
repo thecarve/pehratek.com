@@ -24,7 +24,7 @@ angular.module('pehratekcomApp', [
             templateUrl: 'views/products/product-detail.html',
             controller: 'MainCtrl'
         })
-      .otherwise({
-        redirectTo: '/'
-      });
+        .otherwise({
+          redirectTo: '/'
+        });
   });
