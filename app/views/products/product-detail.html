@@ -1,0 +1,15 @@
+<div class="row">
+    <h3>{{product.title}}</h3>
+    <p>{{product.price | currency}}</p>
+    <ul>
+        <li ng-repeat="image in product.imageUrl" class="list-inline">
+            <img src="{{image}}" alt="product.title" class="img-responsive" />
+        </li>
+    </ul>
+    <ul>
+        <li ng-repeat="option in product.options" class="list-inline">
+            {{option.title}}
+        </li>
+    </ul>
+    <p>{{product.desc}}</p>
+</div>

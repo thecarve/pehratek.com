@@ -1,0 +1,41 @@
+/*-------------------------
+	The menu
+--------------------------*/
+
+nav{
+  display:inline-block;
+  background-color: $brand-primary;
+  box-shadow:0 1px 1px #ccc;
+  border-radius:2px;
+}
+
+nav a{
+  display:inline-block;
+  padding: 14px 24px;
+  color:#fff !important;
+  font-weight:bold;
+  font-size:14px;
+  text-decoration:none !important;
+  line-height:1;
+  text-transform: uppercase;
+  background-color:transparent;
+
+  -webkit-transition:background-color 0.25s;
+  -moz-transition:background-color 0.25s;
+  transition:background-color 0.25s;
+}
+
+nav a:first-child{
+  border-radius:2px 0 0 2px;
+}
+
+nav a:last-child{
+  border-radius:0 2px 2px 0;
+}
+
+nav.home .home,
+nav.projects .projects,
+nav.services .services,
+nav.contact .contact{
+  background-color:#c4d7e0;
+}

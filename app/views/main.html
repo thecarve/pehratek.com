@@ -1,36 +1,81 @@
 <div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">pehratek com</h3>
+    <!-- Adding the ng-app declaration to initialize AngularJS -->
+    <div id="main" class="pull-right" ng-app>
+        <!-- The navigation menu will get the value of the "active" variable as a class.
+             The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+        <nav class="{{active}}" ng-click="$event.preventDefault()">
+
+            <!-- When a link in the menu is clicked, we set the active variable -->
+
+            <a href="#" class="home" ng-click="active='home'">Home</a>
+            <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+            <a href="#" class="services" ng-click="active='services'">Services</a>
+            <a href="#" class="contact" ng-click="active='contact'">Contact</a>
+        </nav>
+
+        <!-- ng-show will show an element if the value in the quotes is truthful,
+             while ng-hide does the opposite. Because the active variable is not set
+             initially, this will cause the first paragraph to be visible. -->
+
+        <p ng-hide="active">Please click a menu item</p>
+        <p ng-show="active">You chose <b>{{active}}</b></p>
+    </div>
+  <h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3>
 </div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+
+<div class="col-md-12">
+    <p>Pehratek Products was created in 1979 as a design lab for specialty products in the areas of audiology and health care. The first product created was the REINFORCER VRA (Visual Reinforcement Apparatus) introduced in late 1980. Combining elements of design innovation and superb product performance, its popularity grew as an easy-to-use, reliable pediatric testing system used by audiologists and pediatric clinics for testing children’s hearing world-wide.
+        Today, Pehratek Products offers a line of innovative of medical/audiology products that offer sound solutions to communications and hearing assessment issues. The introduction of the new XM-1000 Wireless VRA with COMPLETE CONTROL Hand-Held Remote is a breakthrough in pediatric testing technology offering the clinician a multitude of stimulus options to attract and retain the child’s attention throughout the test.
+        We encourage you to contact us regarding your experiences with the products and offer any suggestions or ideas you may have to add to the product line or improvements on an existing product.</p>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="row">
+    <div class="col-md-4">
+        <h3>Product 1</h3>
+        <img src="images/products/product-1.png" alt="" class="img-responsive"/>
+        <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Build Your System</a>
+    </div>
+    <div class="col-md-4">
+        <h3>Product 2</h3>
+        <img src="images/products/product-2.png" alt="" class="img-responsive"/>
+        <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Build Your System</a>
+    </div>
+    <div class="col-md-4">
+        <h3>Product 3</h3>
+        <img src="images/products/product-1.png" alt="" class="img-responsive"/>
+        <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Build Your System</a>
+    </div>
 </div>
 
-<div class="footer">
-  <p>♥ from the Yeoman team</p>
+<div class="row">
+    <div class="col-md-6">Other Products</div>
+    <div class="col-md-6">Legacy Products</div>
 </div>
+
+<footer>
+    <div class="row">
+        <div class="col-md-6 pull-left">Copyright</div>
+        <div class="col-md-6 pull-right">small menu</div>
+    </div>
+</footer>
+
