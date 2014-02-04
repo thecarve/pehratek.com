@@ -1,27 +1,27 @@
 <div class="row">
 
-    <h3>You have chosen the: {{product.title}} system</h3>
-    <p>{{product.price | currency}}</p>
+    <h3>You have chosen the: {{system.title}} system</h3>
+    <p>{{system.price | currency}}</p>
 
     <h3>Available Options</h3>
     <ul class="list-inline">
 
-        <li ng-repeat="option in product.options">
+        <li ng-repeat="option in system.options">
 
             <div class="row">
-                {{products[option].title}}
+                {{systems[option].title}}
             </div>
 
             <div class="row">
-                <img src="{{products[option].imageUrl | limitTo: 1}}" alt="{{products[option].title}}"/>
+                <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
             </div>
 
             <div class="row">
-                <a href="#/product-detail/{{product.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+                <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
             </div>
 
             <div class="row">
-                <a href="#/product/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
+                <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
             </div>
 
         </li>
