@@ -1,18 +1,31 @@
 <div class="row">
-    <h3>{{product.title}} - {{product.category}}</h3>
+
+    <h3>You have chosen the: {{product.title}} system</h3>
     <p>{{product.price | currency}}</p>
-    <ul>
-        <li ng-repeat="image in product.imageUrl" class="list-inline">
-            <img src="{{image}}" alt="product.title" class="img-responsive" />
+
+    <h3>Available Options</h3>
+    <ul class="list-inline">
+
+        <li ng-repeat="option in product.options">
+
+            <div class="row">
+                {{products[option].title}}
+            </div>
+
+            <div class="row">
+                <img src="{{products[option].imageUrl | limitTo: 1}}" alt="{{products[option].title}}"/>
+            </div>
+
+            <div class="row">
+                <a href="#/product-detail/{{product.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+            </div>
+
+            <div class="row">
+                <a href="#/product/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
+            </div>
+
         </li>
+
     </ul>
-    <ul>
-        <li ng-repeat="option in product.options" class="list-inline">
-            {{option.title}}
-        </li>
-    </ul>
-    <p>{{product.desc}}</p>
-    <div class="row">
-        <a href="#/product/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
-    </div>
+
 </div>

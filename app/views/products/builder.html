@@ -34,9 +34,9 @@
     <div class="col-md-4" ng-repeat="product in products | filter: category='system'">
         <h3>{{product.title}} - {{product.category}}</h3>
         <p>{{product.price | currency}}</p>
-        <ul>
-            <li ng-repeat="image in product.imageUrl | limitTo:1" class="list-inline">
-                <img src="{{image}}" alt="product.title" class="img-responsive" />
+        <ul class="list-inline">
+            <li ng-repeat="image in product.imageUrl | limitTo:1">
+                <img src="{{image}}" alt="product.title" class="img-responsive"/>
             </li>
         </ul>
         <ul>
@@ -45,10 +45,12 @@
             </li>
         </ul>
 
-        <a href="#/product/{{product.id +1}}"><h2 class="btn btn-danger">Learn More</h2></a>
+        <div class="row">
+            <a href="#/product-detail/{{product.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+        </div>
 
         <div class="row">
-            <a href="#/product/{{product.id +1}}/options/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
+            <a href="#/product/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
         </div>
 
     </div>
