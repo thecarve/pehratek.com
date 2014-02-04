@@ -1,5 +1,5 @@
 <div class="row">
-    <h3>{{product.title}}</h3>
+    <h3>{{product.title}} - {{product.category}}</h3>
     <p>{{product.price | currency}}</p>
     <ul>
         <li ng-repeat="image in product.imageUrl" class="list-inline">
@@ -12,4 +12,7 @@
         </li>
     </ul>
     <p>{{product.desc}}</p>
+    <div class="row">
+        <a href="#/product/{{product.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
+    </div>
 </div>

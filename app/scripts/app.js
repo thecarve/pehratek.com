@@ -16,6 +16,10 @@ angular.module('pehratekcomApp', [
             templateUrl: 'views/products/builder.html',
             controller: 'MainCtrl'
         })
+        .when('/builder/options', {
+            templateUrl: 'views/products/builder-options.html',
+            controller: 'MainCtrl'
+        })
         .when('/product/:id', {
             templateUrl: 'views/products/product-detail.html',
             controller: 'MainCtrl'
