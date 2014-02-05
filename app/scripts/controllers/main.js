@@ -307,10 +307,6 @@ angular.module('pehratekcomApp')
             [14, 15]            //speakerConsole -9
         ];
 
-        $scope.optionToCategory = [
-            0, 1, 2, 0, 1, 2, 0, 3, 2
-        ];
-
         $scope.selectedSystem = $routeParams.id - 1;
         $scope.selectedCategoryId = $routeParams.cat ? $routeParams.cat - 1 : 0;
         $scope.selectedOptionId = $routeParams.opt ? $routeParams.opt - 1 : 0;
@@ -319,6 +315,7 @@ angular.module('pehratekcomApp')
         $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
         $scope.system = $scope.systems[$scope.selectedSystem];
         $scope.systemOptionIds = $scope.systemToOption[$scope.selectedSystem];
+
         $scope.systemCategoryOptions = (function() {
             var i = 0,
                 j = 0,
