@@ -177,6 +177,14 @@ angular.module('pehratekcomApp')
             [8]
         ];
 
-        $scope.system = $scope.systems[$routeParams.id - 1];
+        $scope.optionToCategory = [
+            1, 2, 3, 1, 2, 3, 1, 4, 3
+        ];
 
+        $scope.selectedSystem = $routeParams.id;
+        $scope.selectedCategory = $routeParams.cat;
+        $scope.selectedOption = $routeParams.opt;
+
+        $scope.system = $scope.systems[$scope.selectedSystem - 1];
+        $scope.options = $scope.systemToOption[$scope.selectedSystem];
     });

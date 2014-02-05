@@ -22,22 +22,29 @@ builder options page
     <ul class="list-inline">
 
         <li ng-repeat="option in system.options">
+        <li ng-repeat="option in options">
 
         <div class="row">
             {{systems[option].title}}
         </div>
+            <div class="row">
+                {{options[option].title}}
+            </div>
 
         <div class="row">
             <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
         </div>
+            <div class="row">
+                <img src="{{options[option].imageUrl | limitTo: 1}}" alt="{{options[option].title}}"/>
+            </div>
 
-        <div class="row">
-            <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
-        </div>
+            <div class="row">
+                <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+            </div>
 
-        <div class="row">
-            <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
-        </div>
+            <div class="row">
+                <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
+            </div>
 
         </li>
 
