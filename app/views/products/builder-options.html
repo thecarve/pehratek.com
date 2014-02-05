@@ -2,18 +2,13 @@ builder options page
 
 <div class="row">
 
-<<<<<<< HEAD
     <h3>System Configuration</h3>
 
-    {{product.title}} - {{product.price | currency}}
-=======
-    <h3>You have chosen the: {{system.title}} system</h3>
-    <p>{{system.price | currency}}</p>
->>>>>>> origin/develop
-
-    <h3>Available Options</h3>
+    {{system.title}} - {{system.price | currency}}
+    
     <ul class="list-inline">
 
+        <li ng-repeat="option in system.options">
         <li ng-repeat="option in system.options">
 
             <div class="row">
