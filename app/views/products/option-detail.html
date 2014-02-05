@@ -1,0 +1,15 @@
+<div class="row">
+
+
+    <p>{{selectedOption.title}}</p>
+    <p>{{selectedOption.price | currency}}</p>
+    <p>{{selectedOption.desc}}</p>
+
+    <ul ng-repeat="img in selectedOption.imgUrl" class="list-inline">
+        <li>
+            <img class="img-responsive" src="{{img}}" alt="{{selectedOption.title}}"/>
+        </li>
+    </ul>
+
+
+</div>

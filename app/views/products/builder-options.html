@@ -1,53 +1,56 @@
-builder options page
+<div class="header">
+    <div id="main" class="pull-right" ng-app>
+        <nav class="home">
+            <a href="#/" class="home">Home</a>
+            <a href="#/builder" class="products">Products</a>
+            <a href="#/services" class="services">Services</a>
+            <a href="#/contact" class="contact">Contact</a>
+        </nav>
+    </div>
+    <h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3>
+</div>
+
+<h3>System Configuration</h3>
+
+ <p><strong>{{system.title}} - {{system.price | currency}}</strong></p>
+
+<div class="row">
+        <div class="btn-group">
+            <a href="#/product/{{selectedSystem+1}}/option/1"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 0}">Centering LCD Monitor</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/2"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 1}">Centering Box</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/3"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 2}">Sound Module</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/4"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 3}">Installation Kit</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/5"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 4}">Corner Mounting Bracket</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/6"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 5}">Dual Arm Mounting Bracket</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/7"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 6}">IR Booster Repeater</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/8"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 7}">Rolling </button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/9"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 8}">Desktop Stand</button></a>
+            <a href="#/product/{{selectedSystem+1}}/option/10"><button type="button" class="btn" ng-class="{'btn-default': selectedCategoryId != 0, 'btn-success': selectedCategoryId === 9}">Speaker Console</button></a>
+        </div>
+</div>
+
+<div class="row">
+    <h2>Available {{selectedCategory.title}}s</h2>
+</div>
 
 <div class="row">
 
-    <h3>System Configuration</h3>
-
-    <p>{{system.title}}</p>
-    <p>{{system.price | currency}}</p>
-
-    <div class="row">
-        <ul class="list-inline">
-            <li ng-repeat="category in categories | filter: name='centeringBox'">Category: {{category.title}}</li>
-        </ul>
-
-        <ul>
-            <li ng-repeat="category in categories">{{name | filter: option='centeringBox'}}</li>
-        </ul>
-    </div>
-
-
-
     <ul class="list-inline">
-
-        <li ng-repeat="option in system.options">
-        <li ng-repeat="option in options">
-
-        <div class="row">
-            {{systems[option].title}}
-        </div>
+        <li ng-repeat="option in systemCategoryOptions" style="margin-left: 100px;">
+            <div class="row">{{option.title}} - {{option.name}}</div>
+            <div class="row">{{option.price | currency}}</div>
             <div class="row">
-                {{options[option].title}}
+                <img class="img-responsive" ng-repeat="img in option.imgUrl" src="{{img}}" alt="{{option.title}}" width="100"/>
             </div>
-
-        <div class="row">
-            <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
-        </div>
             <div class="row">
-                <img src="{{options[option].imageUrl | limitTo: 1}}" alt="{{options[option].title}}"/>
+                <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-danger">Learn More</button></a>
             </div>
-
             <div class="row">
-                <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+                <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
             </div>
-
-            <div class="row">
-                <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
-            </div>
-
         </li>
-
     </ul>
 
 </div>
+
+<a href="#/product/{{selectedSystem+1}}/option/{{selectedCategoryId+2}}"><button class="btn btn-primary">Next</button></a>

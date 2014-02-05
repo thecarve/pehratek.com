@@ -18,15 +18,17 @@ builder page
 </div>
 
 <div class="row">
-    <div class="col-md-4" ng-repeat="system in systems | filter: category='system'">
+    <div ng-repeat="system in systems | filter: category='system'">
         <p>{{system.title}}</p>
         <p>Category: {{system.category}}</p>
         <p>{{system.price | currency}}</p>
+
         <ul class="list-inline">
             <li ng-repeat="image in system.imageUrl | limitTo:1">
-                <img src="{{image}}" alt="system.title" class="img-responsive"/>
+                <img src="{{image}}" alt="{{system.title}}" class="img-responsive"/>
             </li>
         </ul>
+
         <ul>
             <li ng-repeat="option in system.options" class="list-inline">
                 {{option.title}}
@@ -34,11 +36,11 @@ builder page
         </ul>
 
         <div class="row">
-            <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+            <a href="#/system-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
         </div>
 
         <div class="row">
-            <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This Product</button></a>
+            <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
         </div>
 
     </div>

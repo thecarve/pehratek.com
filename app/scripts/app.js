@@ -20,8 +20,16 @@ angular.module('pehratekcomApp', [
             templateUrl: 'views/products/builder-options.html',
             controller: 'MainCtrl'
         })
-        .when('/product-detail/:id', {
-            templateUrl: 'views/products/product-detail.html',
+        .when('/product/:id/option/:cat', {
+            templateUrl: 'views/products/builder-options.html',
+            controller: 'MainCtrl'
+        })
+        .when('/system-detail/:id', {
+            templateUrl: 'views/products/system-detail.html',
+            controller: 'MainCtrl'
+        })
+        .when('/option-detail/:opt', {
+            templateUrl: 'views/products/option-detail.html',
             controller: 'MainCtrl'
         })
         .otherwise({
