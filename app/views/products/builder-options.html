@@ -8,15 +8,14 @@ builder options page
     
     <ul class="list-inline">
 
-        <li ng-repeat="option in system.options">
-        <li ng-repeat="option in system.options">
+        <li ng-repeat="option in options">
 
             <div class="row">
-                {{systems[option].title}}
+                {{options[option].title}}
             </div>
 
             <div class="row">
-                <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
+                <img src="{{options[option].imageUrl | limitTo: 1}}" alt="{{options[option].title}}"/>
             </div>
 
             <div class="row">
