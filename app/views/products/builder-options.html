@@ -4,28 +4,40 @@ builder options page
 
     <h3>System Configuration</h3>
 
-    {{system.title}} - {{system.price | currency}}
-    
+    <p>{{system.title}}</p>
+    <p>{{system.price | currency}}</p>
+
+    <div class="row">
+        <ul class="list-inline">
+            <li ng-repeat="category in categories | filter: name='centeringBox'">Category: {{category.title}}</li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="category in categories">{{name | filter: option='centeringBox'}}</li>
+        </ul>
+    </div>
+
+
+
     <ul class="list-inline">
 
         <li ng-repeat="option in system.options">
-        <li ng-repeat="option in system.options">
 
-            <div class="row">
-                {{systems[option].title}}
-            </div>
+        <div class="row">
+            {{systems[option].title}}
+        </div>
 
-            <div class="row">
-                <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
-            </div>
+        <div class="row">
+            <img src="{{systems[option].imageUrl | limitTo: 1}}" alt="{{systems[option].title}}"/>
+        </div>
 
-            <div class="row">
-                <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
-            </div>
+        <div class="row">
+            <a href="#/product-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+        </div>
 
-            <div class="row">
-                <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
-            </div>
+        <div class="row">
+            <a href="#/product/{{system.id +1}}"><button class="btn btn-primary">Choose This system</button></a>
+        </div>
 
         </li>
 

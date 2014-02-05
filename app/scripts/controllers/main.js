@@ -7,7 +7,7 @@ angular.module('pehratekcomApp')
             {
                 id: 0,
                 name: 'product1',
-                title: 'Product 1',
+                title: 'VIDEO VRA-RF VDS-1000',
                 category: 'system',
                 price: 2000,
                 imageUrl: [
@@ -19,7 +19,7 @@ angular.module('pehratekcomApp')
             {
                 id: 1,
                 name: 'product2',
-                title: 'Product 2',
+                title: '3D TOY XM-5000 WIRELESS/WIRED',
                 category: 'system',
                 price: 1000,
                 imageUrl: [
@@ -31,7 +31,7 @@ angular.module('pehratekcomApp')
             {
                 id: 2,
                 name: 'product3',
-                title: 'Product 3',
+                title: '3D TOY XM-5000 WIRELESS/WIRED',
                 category: 'system',
                 price: 3000,
                 imageUrl: [
@@ -84,8 +84,8 @@ angular.module('pehratekcomApp')
         $scope.options = [
             {
                 id: 0,
-                name: 'product1',
-                title: 'Product 1',
+                name: 'centeringbox1',
+                title: 'Centering Box 1',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
                     'images/products/product1/1.png',
@@ -94,8 +94,8 @@ angular.module('pehratekcomApp')
             },
             {
                 id: 1,
-                name: 'product2',
-                title: 'Product 2',
+                name: 'centeringbox2',
+                title: 'Centering Box 2',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
                     'images/products/product2/1.png',
