@@ -40,7 +40,7 @@
                         <hr/>
                         <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info"><span class="glyphicon glyphicon-book"></span> Learn More...</button></a>
                         <hr/>
-                        <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
+                        <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
                     </div>
                     <hr/>
                 </li>
@@ -55,6 +55,8 @@
         <strong>Your Configuration</strong>
         <hr/>
         <p><small>{{system.title}} <br/>{{system.price | currency}}</small></p>
+        <p ng-repeat="option in cart.options()"><small>{{option.title}} - {{option.price | currency}}</small></p>
+        <p><small>Total - {{cart.price() | currency}}</small></p>
 
     </div><!-- END RIGHT COLUMN -->
 
