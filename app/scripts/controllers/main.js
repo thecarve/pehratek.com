@@ -339,12 +339,6 @@ angular.module('pehratekcomApp')
             [1, 3, 7, 9, 12, 13, 14, 15]         //Video VRA-IR VDS-1500 - 2
         ];
 
-        $scope.systemToCategory = [
-            [0, 1, 2, 3, 7, 8, 9],           //Video VRA-RF VDS-1000 - 0
-            [1, 3, 4, 5, 6],              //3D Toy XM-5000 Wireless/Wired - 1
-            [0, 1, 3, 7, 8, 9]            //Video VRA-IR VDS-1500 - 2
-        ];
-
         $scope.categoryToOption = [
             [0, 1],             //centeringlcdMonitor - 0
             [2, 3, 4, 5],       //centeringBox - 1
