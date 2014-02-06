@@ -40,7 +40,7 @@ builder page
         </div>
 
         <div class="row">
-            <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
+            <a ng-click="cart.setSystemId(system.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
         </div>
 
     </div>

@@ -36,7 +36,7 @@
                         <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-danger">Learn More...</button></a>
                     </div>
                     <div class="row" style="margin-top: 20px;">
-                        <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
+                        <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
                     </div>
                 </li>
                 <li class="active"><button class="btn btn-primary">Skip</button></li>
@@ -48,6 +48,8 @@
 
         <h4>Your Configuration</h4>
         <p><strong>{{system.title}} - {{system.price | currency}}</strong></p>
+        <p ng-repeat="option in cart.options()"><strong>{{option.title}} - {{option.price | currency}}</strong></p>
+        <p><strong>Total - {{cart.price() | currency}}</strong></p>
 
     </div><!-- END RIGHT COLUMN -->
 

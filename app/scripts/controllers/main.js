@@ -2,14 +2,14 @@
 
 angular.module('pehratekcomApp')
     .controller('MainCtrl', function ($scope, $routeParams) {
-        var Cart = function() {
+        var Cart = function(initialSystemId) {
             var self = this,
-                _systemId = null,
+                _systemId = initialSystemId,
                 _options = [];
 
             self.setSystemId = function(systemId) {
                 _systemId = systemId;
-                _options = [];
+//                _options = [];
             };
 
             self.getSystemId = function() {
@@ -28,12 +28,20 @@ angular.module('pehratekcomApp')
                 });
             };
 
+            self.options = function() {
+                return _options;
+            };
+
             self.price = function() {
                 var price = 0;
 
-                angular.forEach(_options, function(option) {
-                    price += option.price;
-                });
+                if (_systemId != null) {
+                    price += $scope.systems[_systemId].price;
+
+                    angular.forEach(_options, function(option) {
+                        price += option.price;
+                    });
+                }
 
                 return price;
             };
@@ -136,7 +144,7 @@ angular.module('pehratekcomApp')
                 id: 0,
                 name: 'vds500',
                 title: 'Wireless Video Centering Monitor',
-                category: 'centeringlcdMonitor',
+                category: 0, //'centeringlcdMonitor'
                 price: 1498,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -147,7 +155,7 @@ angular.module('pehratekcomApp')
             {id: 1,
                 name: 'vds510',
                 title: 'Wireless Video Centering Monitor',
-                category: 'centeringlcdMonitor',
+                category: 0, //'centeringlcdMonitor'
                 price: 1498,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -159,7 +167,7 @@ angular.module('pehratekcomApp')
                 id: 2,
                 name: 'lpa440',
                 title: 'Animated Low Profile Centering Box',
-                category: 'centeringBox',
+                category: 1, //'centeringBox',
                 price: 299,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -171,7 +179,7 @@ angular.module('pehratekcomApp')
                 id: 3,
                 name: 'lpv300',
                 title: 'Lighted Duck Low Profile Centering Box',
-                category: 'centeringBox',
+                category: 1, //'centeringBox',
                 price: 299,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -183,7 +191,7 @@ angular.module('pehratekcomApp')
                 id: 4,
                 name: 'lpc200',
                 title: 'Lighted Duck Low Profile Centering Box',
-                category: 'centeringBox',
+                category: 1, //'centeringBox',
                 price: 129,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -195,7 +203,7 @@ angular.module('pehratekcomApp')
                 id: 5,
                 name: 'lpa400',
                 title: 'Animated Low Profile Centering Box',
-                category: 'centeringBox',
+                category: 1, //'centeringBox',
                 price: 259,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -207,6 +215,7 @@ angular.module('pehratekcomApp')
                 id: 6,
                 name: 'vdo-snd',
                 title: 'Sound Module',
+                category: 2, //sound modules
                 price: 299,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -218,7 +227,7 @@ angular.module('pehratekcomApp')
                 id: 7,
                 name: 'insvid',
                 title: 'Video VRA Installation Kit',
-                category: 'installationKit',
+                category: 3, //'installationKit',
                 price: 79,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -230,7 +239,7 @@ angular.module('pehratekcomApp')
                 id: 8,
                 name: 'ins5000',
                 title: 'XM-5000 Installation Kit',
-                category: 'installationKit',
+                category: 3, //'installationKit',
                 price: 89,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -242,7 +251,7 @@ angular.module('pehratekcomApp')
                 id: 9,
                 name: 'ctrmt',
                 title: 'Flush Mount Bracket???',
-                category: 'cornermountingBracket',
+                category: 4, //'cornermountingBracket',
                 price: 79,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -255,7 +264,7 @@ angular.module('pehratekcomApp')
                 name: 'dua001',
                 title: 'Dual Arm Mounting Bracket',
                 price: 59,
-                category: 'dualarmmountingBracket',
+                category: 5, //'dualarmmountingBracket',
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
                     'images/products/product10/1.png',
@@ -266,7 +275,7 @@ angular.module('pehratekcomApp')
                 id: 11,
                 name: 'irrt200',
                 title: 'IR Signal Booster',
-                category: 'irboosterRepeater',
+                category: 6, //'irboosterRepeater',
                 price: 149,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -278,7 +287,7 @@ angular.module('pehratekcomApp')
                 id: 12,
                 name: 'rolstan',
                 title: 'Rolling Adjustable Stand',
-                category: 'rollingStand',
+                category: 7, //'rollingStand',
                 price: 399,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -290,7 +299,7 @@ angular.module('pehratekcomApp')
                 id: 13,
                 name: 'dsk10',
                 title: 'Desktop Stand',
-                category: 'desktopStand',
+                category: 8, //'desktopStand',
                 price: 129,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -302,7 +311,7 @@ angular.module('pehratekcomApp')
                 id: 14,
                 name: 'vds2000',
                 title: 'VDS-2000 Speaker Console',
-                category: 'speakerConsole',
+                category: 9, //'speakerConsole',
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -314,7 +323,7 @@ angular.module('pehratekcomApp')
                 id: 15,
                 name: 'vds2500',
                 title: 'VDS-2500 Speaker Console',
-                category: 'speakerConsole',
+                category: 9, //'speakerConsole',
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -349,9 +358,11 @@ angular.module('pehratekcomApp')
             [14, 15]            //speakerConsole -9
         ];
 
-        $scope.selectedSystem = $routeParams.id - 1;
+        $scope.selectedSystem = $routeParams.id ? $routeParams.id - 1 : null;
         $scope.selectedCategoryId = $routeParams.cat ? $routeParams.cat - 1 : 0;
         $scope.selectedOptionId = $routeParams.opt ? $routeParams.opt - 1 : 0;
+
+        $scope.cart = new Cart($scope.selectedSystem);
 
         $scope.system = $scope.systems[$scope.selectedSystem];
         $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
@@ -360,18 +371,44 @@ angular.module('pehratekcomApp')
         $scope.systemOptionIds = $scope.systemToOption[$scope.selectedSystem];
 
         $scope.systemCategories = function() {
-            var result = [];
+            var i,
+                j,
+                sysOptions,
+                optionId,
+                catId,
+                sysLen,
+                resultLen,
+                matchFound,
+                result = [];
 
-            angular.forEach($scope.systemToCategory[$scope.selectedSystem], function(catOption) {
-                result.push($scope.options[catOption]);
-            });
+            if ($scope.systemOptionIds) {
+                sysOptions = $scope.systemOptionIds;
+                sysLen = sysOptions.length;
+
+                for (i = 0; i < sysLen; i++) {
+                    resultLen = result.length;
+                    matchFound = false;
+                    optionId = sysOptions[i];
+                    catId = $scope.options[optionId].category;
+
+                    for (j = 0; j < resultLen; j++) {
+                        if (result[j].id == catId) {
+                            matchFound = true;
+                            break;
+                        }
+                    }
+
+
+                    if (!matchFound) result.push($scope.categories[catId]);
+                }
+            }
 
             return result;
         };
 
         $scope.systemCategoryOptions = (function() {
-            var i = 0,
-                j = 0,
+            var i,
+                j,
                 catOptions,
                 sysOptions,
                 catLen,
@@ -395,6 +432,4 @@ angular.module('pehratekcomApp')
 
             return result;
         }());
-
-        $scope.cart = new Cart();
     });
