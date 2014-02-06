@@ -14,20 +14,11 @@
 
     <div class="col-lg-3">
         <ul class="nav nav-pills nav-stacked">
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 0}"><a href="#/product/{{selectedSystem+1}}/option/1">Centering LCD Monitor</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 1}"><a href="#/product/{{selectedSystem+1}}/option/2">Centering Box</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 2}"><a href="#/product/{{selectedSystem+1}}/option/3">Sound Module</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 3}"><a href="#/product/{{selectedSystem+1}}/option/4">Installation Kit</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 4}"><a href="#/product/{{selectedSystem+1}}/option/5">Corner Mounting Bracket</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 5}"><a href="#/product/{{selectedSystem+1}}/option/6">Dual Arm Mounting Bracket</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 6}"><a href="#/product/{{selectedSystem+1}}/option/7">IR Booster Repeater</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 7}"><a href="#/product/{{selectedSystem+1}}/option/8">Rolling Stand</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 8}"><a href="#/product/{{selectedSystem+1}}/option/9">Desktop Stand</a></li>
-            <li ng-class="{'': selectedCategoryId != 0, 'active': selectedCategoryId === 9}"><a href="#/product/{{selectedSystem+1}}/option/10">Speaker Console</a></li>
+            <li ng-repeat="category in systemCategories()" ng-class="{'active': selectedCategoryId === category.id}">
+                <a href="#/product/{{selectedSystem+1}}/option/{{category.id + 1}}">{{category.title}}</a>
+            </li>
         </ul>
     </div>
-
-
 
     <div class="col-lg-7">
 
