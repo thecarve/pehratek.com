@@ -32,13 +32,11 @@
         <div class="row">
             <ul id="option-items" class="list-inline">
                 <li ng-repeat="option in systemCategoryOptions" class="text-center" style="padding: 0 40px;">
-                    <div class="row"><strong>{{option.title}}</strong> <br/>{{option.name}}</div>
+                    <div class="row"><strong>{{option.title}}</strong> <br/> ({{option.name}}) - <strong>{{option.price | currency}}</strong></div>
 
-                    <div class="row text-danger">
-                        <strong>{{option.price | currency}}</strong>
-                        <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 100px; margin: auto;"/>
-                        <hr/>
-                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info"><span class="glyphicon glyphicon-book"></span> Learn More...</button></a>
+                    <div class="row margin-top-20">
+                        <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 150px; margin: auto;"/>
+                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info margin-top-20"><span class="glyphicon glyphicon-book"></span> Learn More...</button></a>
                         <hr/>
                         <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
                     </div>
@@ -61,9 +59,3 @@
     </div><!-- END RIGHT COLUMN -->
 
 </div>
-
-<footer>
-    <div class="col-lg-12 affix-bottom">
-        <div class="col-md-6 pull-left">Copyright © 2014 - Pehratek Products</div>
-    </div>
-</footer>
