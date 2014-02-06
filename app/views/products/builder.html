@@ -1,48 +1,51 @@
-builder page
-<div class="header">
-    <div id="main" class="pull-right" ng-app>
-        <nav class="projects">
-            <a href="#/" class="home">Home</a>
-            <a href="#/builder" class="projects">Products</a>
-            <a href="#/services" class="services">Services</a>
-            <a href="#/contact" class="contact">Contact</a>
-        </nav>
-    </div>
-    <h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3>
-</div>
-
-<div class="row">
-    <hr/>
-    <h1>System Builder</h1>
-    <hr/>
-</div>
-
-<div class="row">
-    <div ng-repeat="system in systems | filter: category='system'">
-        <p>{{system.title}}</p>
-        <p>Category: {{system.category}}</p>
-        <p>{{system.price | currency}}</p>
-
-        <ul class="list-inline">
-            <li ng-repeat="image in system.imageUrl | limitTo:1">
-                <img src="{{image}}" alt="{{system.title}}" class="img-responsive"/>
-            </li>
-        </ul>
-
-        <ul class="list-inline">
-            <li ng-repeat="option in system.options">
-                {{option.title}}
-            </li>
-        </ul>
-
-        <div class="row">
-            <a href="#/system-detail/{{system.id +1}}"><button class="btn btn-danger">Learn More</button></a>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/"><h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3></a>
         </div>
 
-        <div class="row">
-            <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
-        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/" class="home">Home</a></li>
+            <li><a href="#/builder" class="products">Build Your System</a></li>
+            <li><a href="#/contact" class="contact">Contact</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</div>
+</div>
 
-    </div>
+<div class="row margin-top-header text-center">
+    <h2 class="text-primary">Choose Your System</h2>
+    <hr/>
+</div>
+
+<div class="row text-center">
+    <ul class="list-inline">
+        <li ng-repeat="system in systems | filter: category='system'" class="text-center" style="margin-left: 40px;">
+            <p><strong>{{system.title}}</strong></p>
+            <p>Category: {{system.category}}</p>
+            <p><strong>{{system.price | currency}}</strong></p>
+
+            <ul class="list-inline">
+                <li ng-repeat="image in system.imageUrl | limitTo:1">
+                    <img src="{{image}}" alt="{{system.title}}" class="img-responsive" width="250"/>
+                </li>
+            </ul>
+
+            <ul class="list-inline">
+                <li ng-repeat="option in system.options">
+                    {{option.title}}
+                </li>
+            </ul>
+
+            <div class="row">
+                <a href="#/system-detail/{{system.id +1}}"><button class="btn btn-info">Learn More...</button></a>
+                <hr/>
+                <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success">Configure This System</button></a>
+            </div>
+
+        </li>
+
+
+    </ul>
 </div>
 
