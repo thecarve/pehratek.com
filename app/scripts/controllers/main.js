@@ -2,6 +2,42 @@
 
 angular.module('pehratekcomApp')
     .controller('MainCtrl', function ($scope, $routeParams) {
+        var Cart = function() {
+            var self = this,
+                _systemId = null,
+                _options = [];
+
+            self.setSystemId = function(systemId) {
+                _systemId = systemId;
+                _options = [];
+            };
+
+            self.getSystemId = function() {
+                return _systemId;
+            };
+
+            self.addOption = function(optionId) {
+                _options.push($scope.options[optionId]);
+            };
+
+            self.removeOption = function(optionId) {
+                angular.forEach(_options, function(option) {
+                    if (option.id == optionId) {
+                        delete _options[option];
+                    }
+                });
+            };
+
+            self.price = function() {
+                var price = 0;
+
+                angular.forEach(_options, function(option) {
+                    price += option.price;
+                });
+
+                return price;
+            };
+        };
 
         $scope.systems = [
             {
@@ -359,4 +395,6 @@ angular.module('pehratekcomApp')
 
             return result;
         }());
+
+        $scope.cart = new Cart();
     });
