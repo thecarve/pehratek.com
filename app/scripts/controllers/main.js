@@ -294,11 +294,17 @@ angular.module('pehratekcomApp')
             [0, 1, 3, 7, 9]         //Video VRA-IR VDS-1500 - 2
         ];
 
+        $scope.systemToCategory = [
+            [0, 1, 3, 4],           //Video VRA-RF VDS-1000 - 0
+            [0, 1, 2],              //3D Toy XM-5000 Wireless/Wired - 1
+            [0, 1, 3, 4]            //Video VRA-IR VDS-1500 - 2
+        ];
+
         $scope.categoryToOption = [
             [0, 1],             //centeringlcdMonitor - 0
             [2, 3, 4, 5],       //centeringBox - 1
             [6],                //soundModule - 2
-            [7,8],              //installationKit - 3
+            [7, 8],             //installationKit - 3
             [9],                //cornermountingBracket - 4 ???
             [10],               //dualarmmountingBracket - 5
             [11],               //irboosterRepeater - 6
@@ -311,10 +317,21 @@ angular.module('pehratekcomApp')
         $scope.selectedCategoryId = $routeParams.cat ? $routeParams.cat - 1 : 0;
         $scope.selectedOptionId = $routeParams.opt ? $routeParams.opt - 1 : 0;
 
-        $scope.selectedOption = $scope.options[$scope.selectedOptionId];
-        $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
         $scope.system = $scope.systems[$scope.selectedSystem];
+        $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
+        $scope.selectedOption = $scope.options[$scope.selectedOptionId];
+
         $scope.systemOptionIds = $scope.systemToOption[$scope.selectedSystem];
+
+        $scope.systemCategories = function() {
+            var result = [];
+
+            angular.forEach($scope.systemToCategory[$scope.selectedSystem], function(catOption) {
+                result.push($scope.options[catOption]);
+            });
+
+            return result;
+        };
 
         $scope.systemCategoryOptions = (function() {
             var i = 0,
