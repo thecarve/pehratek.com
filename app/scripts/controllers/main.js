@@ -351,7 +351,7 @@ angular.module('pehratekcomApp')
             [11],               //irboosterRepeater - 6
             [12],               //rollingStand - 7
             [13],               //desktopStand - 8
-            [14, 15],           //speakerConsole -9
+            [14, 15]            //speakerConsole -9
         ];
 
         $scope.selectedSystem = $routeParams.id - 1;
