@@ -1,18 +1,24 @@
-<div class="header">
-    <div id="main" class="pull-right" ng-app>
-        <nav class="home">
-            <a href="#/" class="home">Home</a>
-            <a href="#/builder" class="products">Products</a>
-            <a href="#/services" class="services">Services</a>
-            <a href="#/contact" class="contact">Contact</a>
-        </nav>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/"><h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3></a>
+        </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">Home</a></li>
+                <li><a href="#/builder">Build Your System</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
-    <h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3>
-</div><!-- END HEADER -->
+</div>
 
-<div class="row">
 
-    <div class="col-lg-3">
+
+
+<div class="row margin-top-header">
+
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="font-size: 13px;">
         <ul class="nav nav-pills nav-stacked">
             <li ng-repeat="category in systemCategories()" ng-class="{'active': selectedCategoryId === category.id}">
                 <a href="#/product/{{selectedSystem+1}}/option/{{category.id + 1}}">{{category.title}}</a>
@@ -20,51 +26,39 @@
         </ul>
     </div>
 
-    <div class="col-lg-7">
-
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">
+        <h2 class="text-primary">Choose Your {{selectedCategory.title}}</h2>
+        <hr/>
         <div class="row">
             <ul id="option-items" class="list-inline">
-                <li ng-repeat="option in systemCategoryOptions" class="text-center" style="margin-left: 40px;">
-                    <div class="row">{{option.title}} <br/>{{option.name}}</div>
-                    <div class="row text-danger"><strong>{{option.price | currency}}</strong>
+                <li ng-repeat="option in systemCategoryOptions" class="text-center" style="padding: 0 40px;">
+                    <div class="row"><strong>{{option.title}}</strong> <br/>{{option.name}}</div>
+
+                    <div class="row text-danger">
+                        <strong>{{option.price | currency}}</strong>
+                        <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 100px; margin: auto;"/>
                         <hr/>
+                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info">Learn More...</button></a>
+                        <hr/>
+                        <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
                     </div>
-                    <div class="row text-center">
-                        <img class="img-responsive" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" width="175"/>
-                    </div>
-                    <div class="row">
-                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-danger">Learn More...</button></a>
-                    </div>
-                    <div class="row" style="margin-top: 20px;">
-                        <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-primary">Choose This Product</button></a>
-                    </div>
+                    <hr/>
                 </li>
-                <li class="active"><button class="btn btn-primary">Skip</button></li>
             </ul>
+
+            <a href="#/product/{{selectedSystem+1}}/option/{{selectedCategoryId+2}}"><button class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Choose No {{selectedCategory.title}}</button></a>
         </div>
     </div><!-- END LEFT COLUMN -->
 
-    <div class="col-lg-2">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
 
-        <h4>Your Configuration</h4>
-        <p><strong>{{system.title}} - {{system.price | currency}}</strong></p>
-        <p ng-repeat="option in cart.options()"><strong>{{option.title}} - {{option.price | currency}}</strong></p>
-        <p><strong>Total - {{cart.price() | currency}}</strong></p>
+        <strong>Your Configuration</strong>
+        <hr/>
+        <p><small>{{system.title}} <br/>{{system.price | currency}}</small></p>
+        <p ng-repeat="option in cart.options()"><small>{{option.title}} - {{option.price | currency}}</small></p>
+        <p><small>Total - {{cart.price() | currency}}</small></p>
 
     </div><!-- END RIGHT COLUMN -->
-
-</div>
-
-
-
-
-<div class="row">
-
-</div>
-
-<div class="row">
-
-
 
 </div>
 

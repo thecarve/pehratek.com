@@ -32,6 +32,10 @@ angular.module('pehratekcomApp', [
             templateUrl: 'views/products/option-detail.html',
             controller: 'MainCtrl'
         })
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: 'MainCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });
