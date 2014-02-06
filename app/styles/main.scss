@@ -4,6 +4,8 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import "_nav.scss";
 @import "_custom.scss";
 
+#option-items li:hover {border: think solid blue; background-color: #add8e6;}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
