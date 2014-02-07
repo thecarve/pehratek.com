@@ -39,15 +39,13 @@
                         <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 150px; margin: auto;"/>
                         <a href="#/option-detail/{{option.id+1}}">
                             <button class="btn btn-info margin-top-20 btn-width">
-                            Learn More <span class="glyphicon glyphicon-chevron-right"></span>
+                                Learn More <span class="glyphicon glyphicon-chevron-right"></span>
                             </button>
                         </a>
                         <hr/>
-                        <a ng-click="cart.addOption(option)" href="#/product/{{system.id +1}}/option/1">
-                            <button class="btn btn-success btn-width">
-                                Add To Your Configuration <span class="glyphicon glyphicon-plus"></span>
-                            </button>
-                        </a>
+                        <button ng-click="cart.addOption(option)" class="btn btn-success btn-width">
+                            Add To Your Configuration <span class="glyphicon glyphicon-plus"></span>
+                        </button>
                     </div>
                     <hr/>
                 </li>
