@@ -1,52 +1,7 @@
 'use strict';
 
 angular.module('pehratekcomApp')
-    .controller('MainCtrl', function ($scope, $routeParams) {
-        var Cart = function(initialSystemId) {
-            var self = this,
-                _systemId = initialSystemId,
-                _options = [];
-
-            self.setSystemId = function(systemId) {
-                _systemId = systemId;
-//                _options = [];
-            };
-
-            self.getSystemId = function() {
-                return _systemId;
-            };
-
-            self.addOption = function(optionId) {
-                _options.push($scope.options[optionId]);
-            };
-
-            self.removeOption = function(optionId) {
-                angular.forEach(_options, function(option) {
-                    if (option.id == optionId) {
-                        delete _options[option];
-                    }
-                });
-            };
-
-            self.options = function() {
-                return _options;
-            };
-
-            self.price = function() {
-                var price = 0;
-
-                if (_systemId != null) {
-                    price += $scope.systems[_systemId].price;
-
-                    angular.forEach(_options, function(option) {
-                        price += option.price;
-                    });
-                }
-
-                return price;
-            };
-        };
-
+    .controller('MainCtrl', ['$scope', '$routeParams', 'cart', function ($scope, $routeParams, cart) {
         $scope.systems = [
             {
                 id: 0,
@@ -356,13 +311,14 @@ angular.module('pehratekcomApp')
         $scope.selectedCategoryId = $routeParams.cat ? $routeParams.cat - 1 : 0;
         $scope.selectedOptionId = $routeParams.opt ? $routeParams.opt - 1 : 0;
 
-        $scope.cart = new Cart($scope.selectedSystem);
-
         $scope.system = $scope.systems[$scope.selectedSystem];
         $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
         $scope.selectedOption = $scope.options[$scope.selectedOptionId];
 
         $scope.systemOptionIds = $scope.systemToOption[$scope.selectedSystem];
+
+        $scope.cart = cart;
+        if (!$scope.cart.getSystem()) { $scope.cart.setSystem($scope.system); }
 
         $scope.systemCategories = function() {
             var i,
@@ -375,29 +331,36 @@ angular.module('pehratekcomApp')
                 matchFound,
                 result = [];
 
-            if ($scope.systemOptionIds) {
-                sysOptions = $scope.systemOptionIds;
-                sysLen = sysOptions.length;
-
-                for (i = 0; i < sysLen; i++) {
-                    resultLen = result.length;
-                    matchFound = false;
-                    optionId = sysOptions[i];
-                    catId = $scope.options[optionId].category;
-
-                    for (j = 0; j < resultLen; j++) {
-                        if (result[j].id == catId) {
-                            matchFound = true;
-                            break;
-                        }
-                    }
-
-
-                    if (!matchFound) result.push($scope.categories[catId]);
-                }
+            if ($scope.systemCategories.result && $scope.systemCategories.systemId == $scope.selectedSystem) {
+                return $scope.systemCategories.result;
             }
+            else {
+                if ($scope.systemOptionIds) {
+                    sysOptions = $scope.systemOptionIds;
+                    sysLen = sysOptions.length;
 
-            return result;
+                    for (i = 0; i < sysLen; i++) {
+                        resultLen = result.length;
+                        matchFound = false;
+                        optionId = sysOptions[i];
+                        catId = $scope.options[optionId].category;
+
+                        for (j = 0; j < resultLen; j++) {
+                            if (result[j].id == catId) {
+                                matchFound = true;
+                                break;
+                            }
+                        }
+
+                        if (!matchFound) result.push($scope.categories[catId]);
+                    }
+                }
+
+                $scope.systemCategories.systemId = $scope.selectedSystem;
+                $scope.systemCategories.result = result;
+
+                return result;
+            }
         };
 
         $scope.systemCategoryOptions = (function() {
@@ -426,4 +389,27 @@ angular.module('pehratekcomApp')
 
             return result;
         }());
-    });
+
+        $scope.nextCategory = function () {
+            var categories = $scope.systemCategories(),
+                i = 0,
+                len = categories.length,
+                result = categories[len - 1].id;
+
+            for (i; i < len - 1; i++) {
+                if (categories[i].id == $scope.selectedCategoryId) {
+                    result = categories[i + 1].id;
+                    break;
+                }
+            }
+
+            return result;
+        };
+
+        $scope.isLastCategory = function () {
+            var categories = $scope.systemCategories(),
+                len = categories.length;
+
+            return len == 0 || categories[len - 1].id == $scope.selectedCategoryId;
+        };
+    }]);

@@ -40,13 +40,18 @@
                         <hr/>
                         <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info">Learn More...</button></a>
                         <hr/>
-                        <a ng-click="cart.addOption(option.id)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
+                        <a ng-click="cart.addOption(option)" href=""><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
                     </div>
                     <hr/>
                 </li>
             </ul>
 
-            <a href="#/product/{{selectedSystem+1}}/option/{{selectedCategoryId+2}}"><button class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span> Choose No {{selectedCategory.title}}</button></a>
+            <a ng-click="cart.removeCategoryOptions(selectedCategoryId)"
+               href="#/product/{{selectedSystem+1}}/option/{{nextCategory() + 1}}">
+                <button class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove-circle"></span> Choose No {{selectedCategory.title}}
+                </button>
+            </a>
         </div>
     </div><!-- END LEFT COLUMN -->
 
@@ -62,4 +67,6 @@
 
 </div>
 
-<a href="#/product/{{selectedSystem+1}}/option/{{selectedCategoryId+2}}"><button class="btn btn-primary">Next</button></a>
+<a ng-hide="isLastCategory()" href="#/product/{{selectedSystem+1}}/option/{{nextCategory() + 1}}">
+    <button class="btn btn-primary">Next</button>
+</a>
