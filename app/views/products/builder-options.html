@@ -15,47 +15,44 @@
 
 
 
-
 <div class="row margin-top-header">
 
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="font-size: 13px;">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center margin-top-20" style="font-size: 12px;">
         <ul class="nav nav-pills nav-stacked">
             <li ng-repeat="category in systemCategories()" ng-class="{'active': selectedCategoryId === category.id}">
                 <a href="#/product/{{selectedSystem+1}}/option/{{category.id + 1}}">{{category.title}}</a>
             </li>
         </ul>
+        <a href="#/product/{{selectedSystem+1}}/option/{{selectedCategoryId+2}}"><button class="btn btn-primary">Next <span class="glyphicon glyphicon-forward"></span></button></a>
     </div>
 
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-center">
-        <h2 class="text-primary">Choose Your {{selectedCategory.title}}</h2>
-        <hr/>
+        <h2 class="text-primary well well-sm">Choose Your {{selectedCategory.title}}</h2>
         <div class="row">
             <ul id="option-items" class="list-inline">
                 <li ng-repeat="option in systemCategoryOptions" class="text-center" style="padding: 0 40px;">
-                    <div class="row"><strong>{{option.title}}</strong> <br/>{{option.name}}</div>
+                    <div class="row"><strong>{{option.title}}</strong> <br/> ({{option.name}}) - <strong>{{option.price | currency}}</strong></div>
 
-                    <div class="row text-danger">
-                        <strong>{{option.price | currency}}</strong>
-                        <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 100px; margin: auto;"/>
+                    <div class="row margin-top-20">
+                        <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 150px; margin: auto;"/>
+                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info margin-top-20 btn-width">Learn More <span class="glyphicon glyphicon-chevron-right"></span></button></a>
                         <hr/>
-                        <a href="#/option-detail/{{option.id+1}}"><button class="btn btn-info">Learn More...</button></a>
-                        <hr/>
-                        <a ng-click="cart.addOption(option)" href=""><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Add To Your Configuration</button></a>
+                        <a ng-click="cart.addOption(option)" href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success btn-width">Add To Your Configuration <span class="glyphicon glyphicon-plus"></span></button></a>
                     </div>
                     <hr/>
                 </li>
             </ul>
 
             <a ng-click="cart.removeCategoryOptions(selectedCategoryId)"
-               href="#/product/{{selectedSystem+1}}/option/{{nextCategory() + 1}}">
-                <button class="btn btn-danger">
-                    <span class="glyphicon glyphicon-remove-circle"></span> Choose No {{selectedCategory.title}}
+                href="#/product/{{selectedSystem+1}}/option/{{nextCategory() + 1}}">
+                <button class="btn btn-danger btn-width">
+                    I do not want a {{selectedCategory.title}} <span class="glyphicon glyphicon-remove-circle"></span>
                 </button>
             </a>
         </div>
     </div><!-- END LEFT COLUMN -->
 
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center margin-top-20">
 
         <strong>Your Configuration</strong>
         <hr/>
