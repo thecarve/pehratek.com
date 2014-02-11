@@ -1,20 +1,27 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a href="/"><h3 class="text-muted"><img src="images/logo.png" alt="Pehratek Products"/></h3></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".top-collapse"><!-- NOTE!  data-toggle was changed to top-collapse -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/"><h3 class="text-muted"><img class="logo-margin"src="images/logo.png" alt="Pehratek Products"/></h3></a>
         </div>
+        <div class="navbar-collapse collapse top-collapse"><!-- NOTE!  the class top-collapse was added here -->
 
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/builder">Build Your System</a></li>
-            <li><a href="#/contact">Contact</a></li>
-        </ul>
-    </div><!--/.nav-collapse -->
+            <ul class="nav nav-pills navbar-right margin-top-10">
+                <li class="active"><a href="#/">Home</a></li>
+                <li><a href="#/builder">Build Your System</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+
+        </div><!--/.nav-collapse -->
+    </div>
 </div>
-</div>
 
 
-<div class="col-md-12 margin-top-header">
+<div class="col-md-12">
     <h1>What We Do</h1>
     <p>Pehratek Products was created in 1979 as a design lab for specialty products in the areas of audiology and health care. The first product created was the REINFORCER VRA (Visual Reinforcement Apparatus) introduced in late 1980. Combining elements of design innovation and superb product performance, its popularity grew as an easy-to-use, reliable pediatric testing system used by audiologists and pediatric clinics for testing children’s hearing world-wide.
         Today, Pehratek Products offers a line of innovative medical/audiology products that offer sound solutions to communications and hearing assessment issues.</p>
@@ -155,9 +162,15 @@
 
         <ul class="list-inline text-center">
             <li ng-repeat="category in categories">
-                <a href="#/option-detail/{{category.id + 1}}"><button class="btn btn-primary margin-top-20 category-btn">{{category.title}}</button></a>
+                <a href="" ng-click="setCategoryId(category.id)"><button class="btn btn-primary margin-top-20 category-btn">{{category.title}}</button></a>
             </li>
         </ul>
+
+        <div>
+            <ul class="list-inline">
+                <li ng-repeat="option in categoryOptions()">{{option.title}} - {{option.name}}</li>
+            </ul>
+        </div>
 
     <!--<ul class="list-inline">-->
             <!--<li>VDS-500</li>-->

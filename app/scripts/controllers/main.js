@@ -2,6 +2,7 @@
 
 angular.module('pehratekcomApp')
     .controller('MainCtrl', ['$scope', '$routeParams', 'cart', function ($scope, $routeParams, cart) {
+
         $scope.systems = [
             {
                 id: 0,
@@ -285,103 +286,103 @@ angular.module('pehratekcomApp')
                     'images/products/product15/1.png',
                     'images/products/product15/2.png'
                 ]
+            },
+            {
+                id: 16,
+                name: 'xm1000',
+                title: 'XM-1000',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product16/1.png',
+                    'images/products/product16/2.png'
+                ]
+            },
+            {
+                id: 17,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product17/1.png',
+                    'images/products/product17/2.png'
+                ]
+            },
+            {
+                id: 18,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product18/1.png',
+                    'images/products/product18/2.png'
+                ]
+            },
+            {
+                id: 19,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product19/1.png',
+                    'images/products/product15/2.png'
+                ]
+            },
+            {
+                id: 20,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product15/1.png',
+                    'images/products/product15/2.png'
+                ]
+            },
+            {
+                id: 21,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product15/1.png',
+                    'images/products/product15/2.png'
+                ]
+            },
+            {
+                id: 22,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product15/1.png',
+                    'images/products/product15/2.png'
+                ]
+            },
+            {
+                id: 23,
+                name: 'vds2500',
+                title: 'VDS-2500 Speaker Console',
+                category: 10, //'speakerConsole',
+                price: 0,
+                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                imgUrl: [
+                    'images/products/product15/1.png',
+                    'images/products/product15/2.png'
+                ]
             }
-//            {
-//                id: 16,
-//                name: 'xm1000',
-//                title: 'XM-1000',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product16/1.png',
-//                    'images/products/product16/2.png'
-//                ]
-//            },
-//            {
-//                id: 17,
-//                name: 'wr500',
-//                title: 'WR-500',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product17/1.png',
-//                    'images/products/product17/2.png'
-//                ]
-//            },
-//            {
-//                id: 18,
-//                name: 'wrs500quad',
-//                title: 'WRS-500 QUAD',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product18/1.png',
-//                    'images/products/product18/2.png'
-//                ]
-//            },
-//            {
-//                id: 19,
-//                name: 'ir7000',
-//                title: 'IR-7000',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product19/1.png',
-//                    'images/products/product19/2.png'
-//                ]
-//            },
-//            {
-//                id: 20,
-//                name: 'patientlink',
-//                title: 'Patient-Link',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product20/1.png',
-//                    'images/products/product20/2.png'
-//                ]
-//            },
-//            {
-//                id: 21,
-//                name: 'talkback',
-//                title: 'Talk-Back',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product21/1.png',
-//                    'images/products/product21/2.png'
-//                ]
-//            },
-//            {
-//                id: 22,
-//                name: 'rfbooster',
-//                title: 'RF-Booster',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product22/1.png',
-//                    'images/products/product22/2.png'
-//                ]
-//            },
-//            {
-//                id: 23,
-//                name: 'footswitch',
-//                title: 'Footswitch',
-//                category: 10, //'speakerConsole',
-//                price: 0,
-//                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-//                imgUrl: [
-//                    'images/products/product23/1.png',
-//                    'images/products/product23/2.png'
-//                ]
-//            }
         ];
 
         $scope.systemToOption = [
@@ -400,8 +401,8 @@ angular.module('pehratekcomApp')
             [11],               //irboosterRepeater - 6
             [12],               //rollingStand - 7
             [13],               //desktopStand - 8
-            [14, 15]           //speakerConsole -9
-
+            [14, 15],           //speakerConsole -9
+            [16, 17, 18, 19, 20, 21, 22, 23]    //legacyProducts - 10
         ];
 
         $scope.selectedSystem = $routeParams.id ? $routeParams.id - 1 : null;
@@ -417,7 +418,12 @@ angular.module('pehratekcomApp')
         $scope.cart = cart;
         if (!$scope.cart.getSystem()) { $scope.cart.setSystem($scope.system); }
 
-        $scope.systemCategories = function() {
+        $scope.setCategoryId = function(categoryId) {
+            $scope.selectedCategoryId = categoryId;
+            $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
+        };
+
+        $scope.systemCategories = function () {
             var i,
                 j,
                 sysOptions,
@@ -460,7 +466,7 @@ angular.module('pehratekcomApp')
             }
         };
 
-        $scope.systemCategoryOptions = (function() {
+        $scope.systemCategoryOptions = (function () {
             var i,
                 j,
                 catOptions,
@@ -486,6 +492,17 @@ angular.module('pehratekcomApp')
 
             return result;
         }());
+
+        $scope.categoryOptions = function () {
+            var optionIds = $scope.categoryToOption[$scope.selectedCategoryId],
+                result = [];
+
+            angular.forEach(optionIds, function(optionId) {
+                result.push($scope.options[optionId]);
+            });
+
+            return result;
+        };
 
         $scope.nextCategory = function () {
             var categories = $scope.systemCategories(),
