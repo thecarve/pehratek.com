@@ -1,7 +1,8 @@
-<div class="row">
+<div ng-repeat="option in options" class="row">
 
-    <h1>{{selectedOption.title}}</h1>
-    <h3>{{selectedOption.price | currency}}</h3>
+
+    <p>{{selectedOption.title}}</p>
+    <p>{{selectedOption.price | currency}}</p>
     <p>{{selectedOption.desc}}</p>
 
     <ul ng-repeat="img in selectedOption.imgUrl" class="list-inline">
@@ -9,5 +10,6 @@
             <img class="img-responsive" src="{{img}}" alt="{{selectedOption.title}}"/>
         </li>
     </ul>
+
 
 </div>

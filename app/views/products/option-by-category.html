@@ -1,0 +1,12 @@
+
+<ul class="list-inline text-center">
+    <li ng-repeat="title in categories">
+        <button class="btn btn-primary margin-top-20">{{title.title}}s</button>
+    </li>
+</ul>
+
+<ul class="list-unstyled">
+    <li ng-repeat="title in options">
+        {{title.title}}- {{title.name}} - {{title.price | currency}}
+    </li>
+</ul>

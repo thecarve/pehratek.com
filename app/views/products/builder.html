@@ -33,7 +33,7 @@
 
             <ul class="list-inline">
                 <li ng-repeat="option in system.options">
-                    {{option.title}}
+                    <a href="/">{{option.title}}</a>
                 </li>
             </ul>
 
@@ -42,9 +42,6 @@
                 <hr/>
                 <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success">Configure This System</button></a>
             </div>
-
         </li>
-
-
     </ul>
 </div>

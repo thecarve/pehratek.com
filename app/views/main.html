@@ -5,9 +5,9 @@
         </div>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#/" class="home">Home</a></li>
-            <li><a href="#/builder" class="products">Build Your System</a></li>
-            <li><a href="#/contact" class="contact">Contact</a></li>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/builder">Build Your System</a></li>
+            <li><a href="#/contact">Contact</a></li>
         </ul>
     </div><!--/.nav-collapse -->
 </div>
@@ -150,42 +150,48 @@
 
 <div class="row">
 
-        <h2 class="text-center text-primary">Other Products</h2>
+        <h2 class="text-center text-primary">Products Categories</h2>
         <hr/>
 
-        <ul class="list-inline">
-            <li>VDS-500</li>
-            <li>LPA-400</li>
-            <li>VDS-510</li>
-            <li>LPA-440</li>
-            <li>LPC-200</li>
-            <li>LPA-400</li>
-            <li>LPV-300</li>
-            <li>VDS-510</li>
-            <li>LPC-200</li>
-            <li>(DUA-001)</li>
-            <li>(ROL-STAN)</li>
-            <li>(DSK-10)</li>
-            <li>CTR-MT</li>
-            <li>IRRT-200</li>
-            <li>INS-VID</li>
-            <li>INS-VID</li>
-            <li>VDO-SND</li>
-            <li>IRRT-200</li>
-            <li>SRM-1000</li>
-            <li>DOC-102</li>
-            <li>REM-5000</li>
-            <li>WT-1004</li>
-            <li>WT-1002</li>
-            <li>WT-7001</li>
-            <li>IR-SENS</li>
-            <li>CAB-09</li>
-            <li>ADA-012</li>
-            <li>ADA-013</li>
-            <li>ADA-022</li>
-            <li>XM-1001</li>
-            <li>HW-0012</li>
+        <ul class="list-inline text-center">
+            <li ng-repeat="category in categories">
+                <a href="#/option-detail/{{category.id + 1}}"><button class="btn btn-primary margin-top-20 category-btn">{{category.title}}</button></a>
+            </li>
         </ul>
+
+    <!--<ul class="list-inline">-->
+            <!--<li>VDS-500</li>-->
+            <!--<li>LPA-400</li>-->
+            <!--<li>VDS-510</li>-->
+            <!--<li>LPA-440</li>-->
+            <!--<li>LPC-200</li>-->
+            <!--<li>LPA-400</li>-->
+            <!--<li>LPV-300</li>-->
+            <!--<li>VDS-510</li>-->
+            <!--<li>LPC-200</li>-->
+            <!--<li>(DUA-001)</li>-->
+            <!--<li>(ROL-STAN)</li>-->
+            <!--<li>(DSK-10)</li>-->
+            <!--<li>CTR-MT</li>-->
+            <!--<li>IRRT-200</li>-->
+            <!--<li>INS-VID</li>-->
+            <!--<li>INS-VID</li>-->
+            <!--<li>VDO-SND</li>-->
+            <!--<li>IRRT-200</li>-->
+            <!--<li>SRM-1000</li>-->
+            <!--<li>DOC-102</li>-->
+            <!--<li>REM-5000</li>-->
+            <!--<li>WT-1004</li>-->
+            <!--<li>WT-1002</li>-->
+            <!--<li>WT-7001</li>-->
+            <!--<li>IR-SENS</li>-->
+            <!--<li>CAB-09</li>-->
+            <!--<li>ADA-012</li>-->
+            <!--<li>ADA-013</li>-->
+            <!--<li>ADA-022</li>-->
+            <!--<li>XM-1001</li>-->
+            <!--<li>HW-0012</li>-->
+        <!--</ul>-->
 </div>
 
 <hr/>
@@ -193,6 +199,8 @@
 <div class="row">
 
         <h2 class="text-center text-primary">Legacy Products</h2>
+        <h6 class="text-center text-info">no longer available</h6>
+
         <hr/>
 
         <ul class="list-inline">

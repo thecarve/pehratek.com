@@ -60,13 +60,13 @@
         </div>
     </div><!-- END LEFT COLUMN -->
 
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-center margin-top-20">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left margin-top-20">
 
         <strong>Your Configuration</strong>
         <hr/>
         <p><small>{{system.title}} <br/>{{system.price | currency}}</small></p>
         <p ng-repeat="option in cart.options()"><small>{{option.title}} - {{option.price | currency}}</small></p>
-        <p><small>Total - {{cart.price() | currency}}</small></p>
+        <p class="btn btn-primary"><small>Total: {{cart.price() | currency}}</small></p>
 
     </div><!-- END RIGHT COLUMN -->
 

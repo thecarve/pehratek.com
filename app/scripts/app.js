@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('pehratekcomApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute'
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -36,7 +36,12 @@ angular.module('pehratekcomApp', [
             templateUrl: 'views/contact.html',
             controller: 'MainCtrl'
         })
+        .when('/category', {
+            templateUrl: 'views/products/option-by-category.html',
+            controller: 'MainCtrl'
+        })
+
         .otherwise({
-          redirectTo: '/'
+          templateUrl: '404.html'
         });
   });
