@@ -5,7 +5,7 @@ angular.module('pehratekcomApp')
         var _system = null,
             _options = [];
 
-        function removeOption (optionId) {
+        function removeOption(optionId) {
             var i = _options.length - 1;
 
             for (i; i >= 0; i--) {
@@ -15,7 +15,7 @@ angular.module('pehratekcomApp')
             }
         }
 
-        function removeCategoryOptions (categoryId) {
+        function removeCategoryOptions(categoryId) {
             var i = _options.length - 1;
 
             for (i; i >= 0; i--) {

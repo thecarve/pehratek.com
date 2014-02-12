@@ -3,7 +3,7 @@ var MainCtrl, ModalCtrl;
 
 angular.module('pehratekcomApp');
 
-ModalCtrl = function($scope, $modalInstance) {
+ModalCtrl = function ($scope, $modalInstance) {
     $scope.ok = function () {
         $modalInstance.close();
     };
@@ -418,9 +418,11 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
     $scope.systemOptionIds = $scope.systemToOption[$scope.selectedSystem];
 
     $scope.cart = cart;
-    if (!$scope.cart.getSystem()) { $scope.cart.setSystem($scope.system); }
+    if (!$scope.cart.getSystem()) {
+        $scope.cart.setSystem($scope.system);
+    }
 
-    $scope.setCategoryId = function(categoryId) {
+    $scope.setCategoryId = function (categoryId) {
         $scope.selectedCategoryId = categoryId;
         $scope.selectedCategory = $scope.categories[$scope.selectedCategoryId];
     };
@@ -499,7 +501,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
         var optionIds = $scope.categoryToOption[$scope.selectedCategoryId],
             result = [];
 
-        angular.forEach(optionIds, function(optionId) {
+        angular.forEach(optionIds, function (optionId) {
             result.push($scope.options[optionId]);
         });
 
