@@ -9,7 +9,7 @@ angular.module('pehratekcomApp')
             var i = _options.length - 1;
 
             for (i; i >= 0; i--) {
-                if (_options[i].id == optionId) {
+                if (_options[i].id === optionId) {
                     _options.splice(i);
                 }
             }
@@ -19,7 +19,7 @@ angular.module('pehratekcomApp')
             var i = _options.length - 1;
 
             for (i; i >= 0; i--) {
-                if (_options[i].category == categoryId) {
+                if (_options[i].category === categoryId) {
                     _options.splice(i);
                 }
             }
@@ -31,7 +31,7 @@ angular.module('pehratekcomApp')
                 _options = [];
             },
             getSystem: function () {
-                return _system
+                return _system;
             },
             addOption: function (option) {
                 removeCategoryOptions(option.category);
@@ -49,7 +49,7 @@ angular.module('pehratekcomApp')
             price: function () {
                 var price = 0;
 
-                if (_system != null) {
+                if (_system !== null) {
                     price += _system.price;
 
                     angular.forEach(_options, function (option) {
