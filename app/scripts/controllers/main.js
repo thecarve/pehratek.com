@@ -438,7 +438,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             matchFound,
             result = [];
 
-        if ($scope.systemCategories.result && $scope.systemCategories.systemId == $scope.selectedSystem) {
+        if ($scope.systemCategories.result && $scope.systemCategories.systemId === $scope.selectedSystem) {
             return $scope.systemCategories.result;
         }
         else {
@@ -453,13 +453,15 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
                     catId = $scope.options[optionId].category;
 
                     for (j = 0; j < resultLen; j++) {
-                        if (result[j].id == catId) {
+                        if (result[j].id === catId) {
                             matchFound = true;
                             break;
                         }
                     }
 
-                    if (!matchFound) result.push($scope.categories[catId]);
+                    if (!matchFound) {
+                        result.push($scope.categories[catId]);
+                    }
                 }
             }
 
@@ -487,7 +489,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
 
             for (i = 0; i < catLen; i++) {
                 for (j = 0; j < sysLen; j++) {
-                    if (catOptions[i] == sysOptions[j]) {
+                    if (catOptions[i] === sysOptions[j]) {
                         result.push($scope.options[catOptions[i]]);
                     }
                 }
@@ -515,7 +517,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             result = categories[len - 1].id;
 
         for (i; i < len - 1; i++) {
-            if (categories[i].id == $scope.selectedCategoryId) {
+            if (categories[i].id === $scope.selectedCategoryId) {
                 result = categories[i + 1].id;
                 break;
             }
@@ -528,6 +530,6 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
         var categories = $scope.systemCategories(),
             len = categories.length;
 
-        return len == 0 || categories[len - 1].id == $scope.selectedCategoryId;
+        return len === 0 || categories[len - 1].id === $scope.selectedCategoryId;
     };
 };
