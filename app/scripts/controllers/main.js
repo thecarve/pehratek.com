@@ -29,10 +29,9 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             category: 'system',
             price: 3295,
             imageUrl: [
-                'images/products/product-1.png',
-                'images/products/product-2.png'
+                'images/products/vds1000.png'
             ],
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.'
+            desc: 'Consists of TWO 15" LCD Monitors, dual mounting brackets, hand-held RF remote control (14.5"x10.8"x1.7")'
         },
         {
             id: 1,
@@ -41,8 +40,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             category: 'system',
             price: 1398,
             imageUrl: [
-                'images/products/product-1.png',
-                'images/products/product-2.png'
+                'images/products/xm5000.png'
             ],
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.'
         },
@@ -53,8 +51,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             category: 'system',
             price: 3495,
             imageUrl: [
-                'images/products/product-1.png',
-                'images/products/product-2.png'
+                'images/products/vds1500.png'
             ],
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.'
         }
@@ -110,6 +107,11 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             id: 9,
             name: 'speakerConsole',
             title: 'Speaker Console'
+        },
+        {
+            id: 10,
+            name: 'topmountBracket',
+            title: 'Top Mount Bracket'
         }
     ];
 
@@ -122,19 +124,17 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 1498,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product1/1.png',
-                'images/products/product1/2.png'
+                'images/products/vds500/vds500.png'
             ]
         },
         {id: 1,
             name: 'vds510',
             title: 'Wireless Video Centering Monitor',
-            category: 0, //'centeringlcdMonitor'
+            category: 1, //'centeringlcdMonitor'
             price: 1498,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product1/1.png',
-                'images/products/product1/2.png'
+                'images/products/vds510/vds510.png'
             ]
         },
         {
@@ -145,8 +145,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 299,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product2/1.png',
-                'images/products/product2/2.png'
+                'images/products/lpa440/lpa440.png'
             ]
         },
         {
@@ -157,8 +156,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 299,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product3/1.png',
-                'images/products/product3/2.png'
+                'images/products/lpv300/lpv300.png'
             ]
         },
         {
@@ -169,8 +167,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 129,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product4/1.png',
-                'images/products/product4/2.png'
+                'images/products/lpc200/lpc200.png'
             ]
         },
         {
@@ -181,8 +178,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 259,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product5/1.png',
-                'images/products/product5/2.png'
+                'images/products/lpa400/lpa400.png'
             ]
         },
         {
@@ -193,8 +189,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 299,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product6/1.png',
-                'images/products/product6/2.png'
+                'images/products/vdosnd/vdosnd.png'
             ]
         },
         {
@@ -205,8 +200,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 79,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product7/1.png',
-                'images/products/product7/2.png'
+                'images/products/insvid/insvid.png'
             ]
         },
         {
@@ -217,20 +211,18 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 89,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product8/1.png',
-                'images/products/product8/2.png'
+                'images/products/ins5000/ins5000.png'
             ]
         },
         {
             id: 9,
             name: 'ctrmt',
-            title: 'Flush Mount Bracket???',
+            title: 'Flush Mount Bracket',
             category: 4, //'cornermountingBracket',
             price: 79,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product9/1.png',
-                'images/products/product9/2.png'
+                'images/products/ctrmt/ctrmt.png'
             ]
         },
         {
@@ -241,8 +233,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             category: 5, //'dualarmmountingBracket',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product10/1.png',
-                'images/products/product10/2.png'
+                'images/products/dua001/dua001.png'
             ]
         },
         {
@@ -253,8 +244,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 149,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product11/1.png',
-                'images/products/product11/2.png'
+                'images/products/irrt200/irrt200.png'
             ]
         },
         {
@@ -265,8 +255,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 399,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product12/1.png',
-                'images/products/product12/2.png'
+                'images/products/rolstan/rolstan.png'
             ]
         },
         {
@@ -277,8 +266,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 129,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product13/1.png',
-                'images/products/product13/2.png'
+                'images/products/dsk10/dsk10.png'
             ]
         },
         {
@@ -286,11 +274,10 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             name: 'vds2000',
             title: 'VDS-2000 Speaker Console',
             category: 9, //'speakerConsole',
-            price: 0,
+            price: 4475,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product14/1.png',
-                'images/products/product14/2.png'
+                'images/products/vds2000/vds2000.png'
             ]
         },
         {
@@ -298,11 +285,10 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             name: 'vds2500',
             title: 'VDS-2500 Speaker Console',
             category: 9, //'speakerConsole',
-            price: 0,
+            price: 4675,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product15/1.png',
-                'images/products/product15/2.png'
+                'images/products/vds2500/vds2500.png'
             ]
         },
         {
@@ -325,20 +311,18 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             price: 0,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product17/1.png',
-                'images/products/product17/2.png'
+                'images/products/vds2500/vds2500.png'
             ]
         },
         {
             id: 18,
-            name: 'vds2500',
-            title: 'VDS-2500 Speaker Console',
-            category: 10, //'speakerConsole',
+            name: 'std500',
+            title: 'Video VRA To Mounting Bracket',
+            category: 10, //'topmountBracket',
             price: 0,
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
             imgUrl: [
-                'images/products/product18/1.png',
-                'images/products/product18/2.png'
+                'images/products/std500/std500.png'
             ]
         },
         {
@@ -404,23 +388,23 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
     ];
 
     $scope.systemToOption = [
-        [0, 2, 3, 6, 7, 8, 9, 12, 13, 14, 15],  //Video VRA-RF VDS-1000 - 0
-        [0, 1, 3, 4, 5, 6, 10, 11],        //3D Toy XM-5000 Wireless/Wired - 1
-        [1, 3, 7, 9, 12, 13, 14, 15]         //Video VRA-IR VDS-1500 - 2
+        [0, 2, 3, 6, 9, 10, 12, 7, 13, 14],  //Video VRA-RF VDS-1000 - 0
+        [2, 4, 1, 8, 18, 9, 10, 11, 12, 13],        //3D Toy XM-5000 Wireless/Wired - 1
+        [0, 5, 4, 7, 10, 9, 12, 13, 15]         //Video VRA-IR VDS-1500 - 2
     ];
 
     $scope.categoryToOption = [
-        [0, 1],             //centeringlcdMonitor - 0
-        [2, 3, 4, 5],       //centeringBox - 1
-        [6],                //soundModule - 2
+        [0],             //centeringlcdMonitor - 0
+        [2, 3, 4, 5, 1],       //centeringBox - 2
+        [6],                //soundModule - 3
         [7, 8],             //installationKit - 3
-        [9],                //cornermountingBracket - 4 ???
+        [9],                //cornermountingBracket - 4
         [10],               //dualarmmountingBracket - 5
         [11],               //irboosterRepeater - 6
-        [12],               //rollingStand - 7
+        [12],               //rollingStand - 6
         [13],               //desktopStand - 8
         [14, 15],           //speakerConsole -9
-        [16, 17, 18, 19, 20, 21, 22, 23]    //legacyProducts - 10
+        [18]                //topmountbracket
     ];
 
     $scope.selectedSystem = $routeParams.id ? $routeParams.id - 1 : null;
