@@ -138,7 +138,7 @@ MainCtrl = function ($scope, $routeParams, $modal, cart) {
             ]
         },
         {
-        id: 2,
+            id: 2,
             name: 'lpa440',
             title: 'Animated Low Profile Centering Box',
             category: 1, //'centeringBox',
