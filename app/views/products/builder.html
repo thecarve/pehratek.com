@@ -40,7 +40,7 @@
             </ul>
 
             <ul class="list-inline">
-                <li ng-repeat="option in system.options">
+                <li ng-repeat="option in optionsForSystem(system.id)">
                     <a href="/">{{option.title}}</a>
                 </li>
             </ul>
