@@ -16,13 +16,13 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 	
 // create email body and send it	
-$to = 'troy@thecarve.com'; // put your email
-$email_subject = "Contact form submitted by:  $name";
+$to = 'troy316@gmail.com'; // put your email
+$email_subject = "System configuration submitted by:  $name";
 $email_body = "You have received a new message. \n\n".
-				  " Here are the details:\n \nName: $name \n ".
-				  " Phone:\n  $phone \n ".
-				  "Email: $email_address\n Message \n $message";
-$headers = "From: troy@thecarve.com\n";
+				  " Here are the details:\n \nName: $name \n".
+				  "Phone: $phone \n ".
+				  "Email: $email_address\n Notes/Comments: \n $message";
+$headers = "From: troy316@gmail.com\n";
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
