@@ -15,7 +15,7 @@ angular.module('pehratekcomApp')
         $scope.open = function () {
             $modal.open({
                 templateUrl: 'views/test.html',
-                controller: ModalCtrl
+                controller: 'ModalCtrl'
             });
         };
 
