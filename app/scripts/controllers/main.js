@@ -59,57 +59,62 @@ angular.module('pehratekcomApp')
             {
                 id: 0,
                 name: 'centeringlcdMonitor',
-                title: 'Centering LCD Monitor'
+                title: 'Centering LCD Monitors'
             },
             {
                 id: 1,
                 name: 'centeringBox',
-                title: 'Centering Box'
+                title: 'Centering Boxes'
             },
             {
                 id: 2,
                 name: 'soundModule',
-                title: 'Sound Module'
+                title: 'Sound Modules'
             },
             {
                 id: 3,
                 name: 'installationKit',
-                title: 'Installation Kit'
+                title: 'Installation Kits'
             },
             {
                 id: 4,
                 name: 'cornermountingBracket',
-                title: 'Corner Mounting Bracket'
+                title: 'Corner Mounting Brackets'
             },
             {
                 id: 5,
                 name: 'dualarmmountingBracket',
-                title: 'Dual Arm Mounting Bracket'
+                title: 'Dual Arm Mounting Brackets'
             },
             {
                 id: 6,
                 name: 'irboosterRepeater',
-                title: 'IR Booster Repeater'
+                title: 'IR Booster Repeaters'
             },
             {
                 id: 7,
                 name: 'rollingStand',
-                title: 'Rolling Stand'
+                title: 'Rolling Stands'
             },
             {
                 id: 8,
                 name: 'desktopStand',
-                title: 'Desktop Stand'
+                title: 'Desktop Stands'
             },
             {
                 id: 9,
                 name: 'speakerConsole',
-                title: 'Speaker Console'
+                title: 'Speaker Consoles'
             },
             {
                 id: 10,
                 name: 'topmountBracket',
-                title: 'Top Mount Bracket'
+                title: 'Top Mount Brackets'
+            },
+            {
+                id: 11,
+                name: 'legacyProduct',
+                title: 'Legacy Products'
             }
         ];
 
@@ -291,9 +296,9 @@ angular.module('pehratekcomApp')
             },
             {
                 id: 16,
-                name: 'xm1000',
-                title: 'XM-1000',
-                category: 10, //'speakerConsole',
+                name: 'legacy1',
+                title: 'legacy1',
+                category: 11, //'none',
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -303,9 +308,9 @@ angular.module('pehratekcomApp')
             },
             {
                 id: 17,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
+                name: 'legacy2',
+                title: 'legacy2',
+                category: 11, //'none',
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
@@ -317,77 +322,17 @@ angular.module('pehratekcomApp')
                 name: 'std500',
                 title: 'Video VRA To Mounting Bracket',
                 category: 10, //'topmountBracket',
-                price: 0,
+                price: 89,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
                     'images/products/std500/std500.png'
-                ]
-            },
-            {
-                id: 19,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
-                price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-                imgUrl: [
-                    'images/products/product19/1.png',
-                    'images/products/product15/2.png'
-                ]
-            },
-            {
-                id: 20,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
-                price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-                imgUrl: [
-                    'images/products/product15/1.png',
-                    'images/products/product15/2.png'
-                ]
-            },
-            {
-                id: 21,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
-                price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-                imgUrl: [
-                    'images/products/product15/1.png',
-                    'images/products/product15/2.png'
-                ]
-            },
-            {
-                id: 22,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
-                price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-                imgUrl: [
-                    'images/products/product15/1.png',
-                    'images/products/product15/2.png'
-                ]
-            },
-            {
-                id: 23,
-                name: 'vds2500',
-                title: 'VDS-2500 Speaker Console',
-                category: 10, //'speakerConsole',
-                price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
-                imgUrl: [
-                    'images/products/product15/1.png',
-                    'images/products/product15/2.png'
                 ]
             }
         ];
 
         $scope.systemToOption = [
             [0, 2, 3, 6, 9, 10, 12, 7, 13, 14],  //Video VRA-RF VDS-1000 - 0
-            [2, 4, 1, 8, 18, 9, 10, 11, 12, 13],        //3D Toy XM-5000 Wireless/Wired - 1
+            [0, 2, 4, 8, 18, 9, 10, 11, 12, 13],        //3D Toy XM-5000 Wireless/Wired - 1
             [0, 5, 4, 7, 10, 9, 12, 13, 15]         //Video VRA-IR VDS-1500 - 2
         ];
 
@@ -402,7 +347,8 @@ angular.module('pehratekcomApp')
             [12],               //rollingStand - 6
             [13],               //desktopStand - 8
             [14, 15],           //speakerConsole -9
-            [18]                //topmountbracket
+            [18],                //topmountbracket
+            [16, 17]            // legacy
         ];
 
         $scope.selectedSystem = $routeParams.id ? $routeParams.id - 1 : null;
