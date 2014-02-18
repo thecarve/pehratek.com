@@ -2,7 +2,7 @@
 var MainCtrl, ModalCtrl;
 
 angular.module('pehratekcomApp')
-    .controller('ModalCtrl', ['$scope', '$modalInstance', function ($scope, $modalInstance) {
+    .controller('ModalCtrl', ['$scope', '$modalInstance', 'products', function ($scope, $modalInstance, products) {
         $scope.ok = function () {
             $modalInstance.close();
         };
@@ -10,11 +10,15 @@ angular.module('pehratekcomApp')
         $scope.cancel = function () {
             $modalInstance.dismiss('cancel');
         };
+
+        $scope.selectedOption = products.selectedOption();
     }])
     .controller('MainCtrl', ['$scope', '$routeParams', '$modal', 'cart', 'products', function ($scope, $routeParams, $modal, cart, products) {
-        $scope.open = function () {
+        $scope.optionDetail = function (optionId) {
+            products.setOption(optionId);
+
             $modal.open({
-                templateUrl: 'views/test.html',
+                templateUrl: 'views/products/option-detail.html',
                 controller: 'ModalCtrl'
             });
         };
@@ -45,9 +49,15 @@ angular.module('pehratekcomApp')
         $scope.systems = products.allSystems();
         $scope.categories = products.allCategories();
         $scope.options = products.allOptions();
-        $scope.categoryOptions = products.categoryOptions($scope.selectedCategoryId);
-        $scope.systemCategories = products.systemCategories($scope.selectedSystemId);
-        $scope.systemCategoryOptions = products.systemCategoryOptions($scope.selectedSystemId, $scope.selectedCategoryId);
+        $scope.categoryOptions = function () {
+            return products.categoryOptions($scope.selectedCategoryId);
+        };
+        $scope.systemCategories = function () {
+            return products.systemCategories($scope.selectedSystemId);
+        };
+        $scope.systemCategoryOptions = function () {
+            return products.systemCategoryOptions($scope.selectedSystemId, $scope.selectedCategoryId);
+        };
 
         $scope.optionsForSystem = function (systemId) {
             return products.optionsForSystem(systemId);
