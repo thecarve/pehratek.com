@@ -295,8 +295,7 @@ angular.module('pehratekcomApp')
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
-                    'images/products/product16/1.png',
-                    'images/products/product16/2.png'
+                    'images/logo.png'
                 ]
             },
             {
@@ -307,7 +306,7 @@ angular.module('pehratekcomApp')
                 price: 0,
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
                 imgUrl: [
-                    'images/products/vds2500/vds2500.png'
+                    'images/logo.png'
                 ]
             },
             {
