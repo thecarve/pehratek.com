@@ -2,7 +2,10 @@
 
 angular.module('pehratekcomApp')
     .factory('products', function () {
-        var systems,
+        var _systemId,
+            _categoryId,
+            _optionId,
+            systems,
             categories,
             options,
             optionsForSystem,
@@ -430,6 +433,8 @@ angular.module('pehratekcomApp')
             return result;
         };
 
+
+
         return {
             allSystems: function () {
                 return systems;
@@ -460,6 +465,18 @@ angular.module('pehratekcomApp')
             },
             categoryOptions: function (categoryId) {
                 return categoryOptions(categoryId);
+            },
+            selectedOption: function () {
+                return options[_optionId];
+            },
+            setSystem: function (systemId) {
+                _systemId = systemId;
+            },
+            setCategory: function (categoryId) {
+                _categoryId = categoryId;
+            },
+            setOption: function (optionId) {
+                _optionId = optionId;
             }
         }
     });
