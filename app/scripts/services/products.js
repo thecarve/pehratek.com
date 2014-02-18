@@ -292,22 +292,22 @@ angular.module('pehratekcomApp')
             },
             {
                 id: 16,
-                name: 'legacy1',
-                title: 'legacy1',
-                category: 11, //'none',
+                name: 'talkback',
+                title: 'Talk Back Intercom System',
+                category: 11, //'legacy',
                 price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
                 ]
             },
             {
                 id: 17,
-                name: 'legacy2',
-                title: 'legacy2',
-                category: 11, //'none',
+                name: 'ir7000',
+                title: 'IR-7000 Animitronic VRA (INFRA-Red) w/Wireless Remote',
+                category: 11, //'legacy',
                 price: 0,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
                 ]
@@ -322,6 +322,28 @@ angular.module('pehratekcomApp')
                 imgUrl: [
                     'images/products/std500/std500.png'
                 ]
+            },
+            {
+                id: 19,
+                name: 'xm1000',
+                title: 'XM-1000 Wireless VRA',
+                category: 11, //'legacy',
+                price: 0,
+                desc: 'No longer available.',
+                imgUrl: [
+                    'images/logo.png'
+                ]
+            },
+            {
+                id: 20,
+                name: 'wrs500',
+                title: 'WRS-500/WRS-500 Quad WiredD VRA',
+                category: 11, //'legacy',
+                price: 0,
+                desc: 'No longer available.',
+                imgUrl: [
+                    'images/logo.png'
+                ]
             }
         ];
 
@@ -332,8 +354,8 @@ angular.module('pehratekcomApp')
         ];
 
         optionsForCategory = [
-            [0],             //centeringlcdMonitor - 0
-            [2, 3, 4, 5, 1],       //centeringBox - 2
+            [0],                //centeringlcdMonitor - 0
+            [2, 3, 4, 5, 1],    //centeringBox - 2
             [6],                //soundModule - 3
             [7, 8],             //installationKit - 3
             [9],                //cornermountingBracket - 4
@@ -342,8 +364,8 @@ angular.module('pehratekcomApp')
             [12],               //rollingStand - 6
             [13],               //desktopStand - 8
             [14, 15],           //speakerConsole -9
-            [18],                //topmountbracket
-            [16, 17]            // legacy
+            [18],               //topmountbracket
+            [16, 17, 19, 20]    // legacy
         ];
 
         systemCategories = function (systemId) {

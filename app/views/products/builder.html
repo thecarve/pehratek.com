@@ -46,7 +46,11 @@
             </ul>
 
             <div class="row">
-                <a href="#/system-detail/{{system.id +1}}"><button class="btn btn-info">Learn More...</button></a>
+                <a ng-click="optionDetail(option.id)" href="">
+                    <button class="btn btn-info margin-top-20 btn-width">
+                        Learn More <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </a>
                 <hr/>
                 <a href="#/product/{{system.id +1}}/option/1"><button class="btn btn-success">Configure This System</button></a>
             </div>
