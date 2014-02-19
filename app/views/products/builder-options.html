@@ -71,10 +71,12 @@
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left margin-top-20">
 
         <strong>Your System</strong>
-        <p><small><strong>{{system.title}}</strong> <br/>{{system.price | currency}}</small></p>
+        <p><small><strong>{{selectedSystem.title}}</strong> <br/>{{selectedSystem.price | currency}}</small></p>
         <strong>Options</strong>
         <p ng-repeat="option in cart.options()"><small>{{option.title}} {{option.price | currency}}</small></p>
         <p class="btn btn-primary"><small>Total: {{cart.price() | currency}}</small></p>
+        <p ng-click="openOrderForm()" class="btn btn-primary"><small>Place Order</small></p>
+
         <a ng-click="cart.removeCategoryOptions(selectedCategoryId)"
            href="#/product/{{selectedSystemId + 1}}/option/{{nextCategory() + 1}}">
         </a>

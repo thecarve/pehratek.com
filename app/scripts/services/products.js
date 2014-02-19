@@ -455,8 +455,6 @@ angular.module('pehratekcomApp')
             return result;
         };
 
-
-
         return {
             allSystems: function () {
                 return systems;
@@ -487,6 +485,12 @@ angular.module('pehratekcomApp')
             },
             categoryOptions: function (categoryId) {
                 return categoryOptions(categoryId);
+            },
+            selectedSystem: function () {
+                return systems[_systemId];
+            },
+            selectedCategory: function () {
+                return categories[_categoryId];
             },
             selectedOption: function () {
                 return options[_optionId];

@@ -13,6 +13,19 @@ angular.module('pehratekcomApp')
 
         $scope.selectedOption = products.selectedOption();
     }])
+    .controller('SubmitModalCtrl', ['$scope', '$modalInstance', 'cart', function ($scope, $modalInstance, cart) {
+        $scope.ok = function () {
+            $modalInstance.close();
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.close('cancel');
+        };
+
+        $scope.selectedSystem = cart.getSystem();
+        $scope.options = cart.options();
+        $scope.total = cart.price();
+    }])
     .controller('MainCtrl', ['$scope', '$routeParams', '$modal', 'cart', 'products', function ($scope, $routeParams, $modal, cart, products) {
         $scope.optionDetail = function (optionId) {
             products.setOption(optionId);
@@ -23,28 +36,57 @@ angular.module('pehratekcomApp')
             });
         };
 
-        $scope.selectedSystemId = $routeParams.id ? $routeParams.id - 1 : null;
-        $scope.selectedCategoryId = $routeParams.cat ? $routeParams.cat - 1 : 0;
-        $scope.selectedOptionId = $routeParams.opt ? $routeParams.opt - 1 : 0;
+        $scope.openOrderForm = function () {
+            $modal.open({
+                templateUrl: 'views/order-form.html',
+                controller: 'SubmitModalCtrl'
+            });
+        };
 
-        $scope.selectedSystem = products.getSystem($scope.selectedSystemId);
-        $scope.selectedCategory = products.getCategory($scope.selectedCategoryId);
-        $scope.selectedOption = products.getOption($scope.selectedOptionId);
+        $scope.setSystemId = function (systemId) {
+            $scope.selectedSystemId = systemId;
+            products.setSystem(systemId);
+        };
+
+        $scope.setCategoryId = function (categoryId) {
+            $scope.selectedCategoryId = categoryId;
+            products.setCategory(categoryId);
+        };
+
+        $scope.setOptionId = function (optionId) {
+            $scope.selectedOptionId = optionId;
+            products.setOption(optionId);
+        };
+
+        if ($routeParams.id) {
+            $scope.setSystemId($routeParams.id - 1);
+        }
+        else {
+            $scope.setSystemId(0);
+        }
+
+        if ($routeParams.cat) {
+            $scope.setCategoryId($routeParams.cat - 1);
+        }
+        else {
+            $scope.setCategoryId(0);
+        }
+
+        if ($routeParams.opt) {
+            $scope.setOptionId($routeParams.opt - 1);
+        }
+        else {
+            $scope.setOptionId(0);
+        }
+
+        $scope.selectedSystem = products.selectedSystem();
+        $scope.selectedCategory = products.selectedCategory();
+        $scope.selectedOption = products.selectedOption();
 
         $scope.cart = cart;
         if (!$scope.cart.getSystem()) {
             $scope.cart.setSystem($scope.selectedSystem);
         }
-
-        $scope.setSystemId = function (systemId) {
-            $scope.selectedSystemId = systemId;
-            $scope.selectedSystem = products.getSystem(systemId);
-        };
-
-        $scope.setCategoryId = function (categoryId) {
-            $scope.selectedCategoryId = categoryId;
-            $scope.selectedCategory = products.getCategory(categoryId);
-        };
 
         $scope.systems = products.allSystems();
         $scope.categories = products.allCategories();
