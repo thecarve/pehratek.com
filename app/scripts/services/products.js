@@ -5,17 +5,18 @@ angular.module('pehratekcomApp')
         var _systemId,
             _categoryId,
             _optionId,
-            systems,
-            categories,
-            options,
-            optionsForSystem,
-            optionsForCategory,
-            systemCategories,
-            systemOptions,
-            systemCategoryOptions,
-            categoryOptions;
+            _systems,
+            _categories,
+            _options,
+            _optionsByCategory,
+            _optionsForSystem,
+            _optionsForCategory,
+            _systemCategories,
+            _systemOptions,
+            _systemCategoryOptions,
+            _categoryOptions;
 
-        systems = [
+        _systems = [
             {
                 id: 0,
                 name: 'vds1000',
@@ -51,7 +52,7 @@ angular.module('pehratekcomApp')
             }
         ];
 
-        categories = [
+        _categories = [
             {
                 id: 0,
                 name: 'centeringlcdMonitor',
@@ -114,7 +115,7 @@ angular.module('pehratekcomApp')
             }
         ];
 
-        options = [
+        _options = [
             {
                 id: 0,
                 name: 'vds500',
@@ -347,13 +348,13 @@ angular.module('pehratekcomApp')
             }
         ];
 
-        optionsForSystem = [
+        _optionsForSystem = [
             [0, 2, 3, 6, 9, 10, 12, 7, 13, 14],  //Video VRA-RF VDS-1000 - 0
             [0, 2, 4, 8, 18, 9, 10, 11, 12, 13],        //3D Toy XM-5000 Wireless/Wired - 1
             [0, 5, 4, 7, 10, 9, 12, 13, 15]         //Video VRA-IR VDS-1500 - 2
         ];
 
-        optionsForCategory = [
+        _optionsForCategory = [
             [0],                //centeringlcdMonitor - 0
             [2, 3, 4, 5, 1],    //centeringBox - 2
             [6],                //soundModule - 3
@@ -368,10 +369,23 @@ angular.module('pehratekcomApp')
             [16, 17, 19, 20]    // legacy
         ];
 
-        systemCategories = function (systemId) {
+        _optionsByCategory = function () {
+            var i, catLen, category, result = [];
+
+            catLen = _categories.length;
+            for (i = 0; i < catLen; i++) {
+                category = _categories[i];
+                category.options = _categoryOptions(category.id);
+                result.push(category);
+            }
+
+            return result;
+        };
+
+        _systemCategories = function (systemId) {
             var i,
                 j,
-                sysOptions = optionsForSystem[systemId],
+                sysOptions = _optionsForSystem[systemId],
                 optionId,
                 catId,
                 sysLen,
@@ -379,8 +393,8 @@ angular.module('pehratekcomApp')
                 matchFound,
                 result = [];
 
-            if (systemCategories.result && systemCategories.systemId === systemId) {
-                return systemCategories.result;
+            if (_systemCategories.result && _systemCategories.systemId === systemId) {
+                return _systemCategories.result;
             }
             else {
                 if (sysOptions) {
@@ -390,7 +404,7 @@ angular.module('pehratekcomApp')
                         resultLen = result.length;
                         matchFound = false;
                         optionId = sysOptions[i];
-                        catId = options[optionId].category;
+                        catId = _options[optionId].category;
 
                         for (j = 0; j < resultLen; j++) {
                             if (result[j].id === catId) {
@@ -400,24 +414,24 @@ angular.module('pehratekcomApp')
                         }
 
                         if (!matchFound) {
-                            result.push(categories[catId]);
+                            result.push(_categories[catId]);
                         }
                     }
                 }
 
-                systemCategories.systemId = systemId;
-                systemCategories.result = result;
+                _systemCategories.systemId = systemId;
+                _systemCategories.result = result;
 
                 return result;
             }
         };
 
-        systemOptions = function (systemId) {
+        _systemOptions = function (systemId) {
             //TODO: automate this
-            return optionsForSystem[systemId];
+            return _optionsForSystem[systemId];
         };
 
-        systemCategoryOptions = function (systemId, categoryId) {
+        _systemCategoryOptions = function (systemId, categoryId) {
             var i,
                 j,
                 catOptions,
@@ -427,15 +441,15 @@ angular.module('pehratekcomApp')
                 result = [];
 
             if (systemId !== null && categoryId !== null) {
-                catOptions = optionsForCategory[categoryId];
-                sysOptions = optionsForSystem[systemId];
+                catOptions = _optionsForCategory[categoryId];
+                sysOptions = _optionsForSystem[systemId];
                 catLen = catOptions.length;
                 sysLen = sysOptions.length;
 
                 for (i = 0; i < catLen; i++) {
                     for (j = 0; j < sysLen; j++) {
                         if (catOptions[i] === sysOptions[j]) {
-                            result.push(options[catOptions[i]]);
+                            result.push(_options[catOptions[i]]);
                         }
                     }
                 }
@@ -444,12 +458,12 @@ angular.module('pehratekcomApp')
             return result;
         };
 
-        categoryOptions = function (categoryId) {
-            var optionIds = optionsForCategory[categoryId],
+        _categoryOptions = function (categoryId) {
+            var optionIds = _optionsForCategory[categoryId],
                 result = [];
 
             angular.forEach(optionIds, function (optionId) {
-                result.push(options[optionId]);
+                result.push(_options[optionId]);
             });
 
             return result;
@@ -457,43 +471,46 @@ angular.module('pehratekcomApp')
 
         return {
             allSystems: function () {
-                return systems;
+                return _systems;
             },
             allCategories: function () {
-                return categories;
+                return _categories;
             },
             allOptions: function () {
-                return options;
+                return _options;
+            },
+            optionsByCategory: function () {
+                return _optionsByCategory();
             },
             getSystem: function (systemId) {
-                return systems[systemId];
+                return _systems[systemId];
             },
             getCategory: function (categoryId) {
-                return categories[categoryId];
+                return _categories[categoryId];
             },
             getOption: function (optionId) {
-                return options[optionId];
+                return _options[optionId];
             },
             systemCategories: function (systemId) {
-                return systemCategories(systemId);
+                return _systemCategories(systemId);
             },
             systemOptions: function (systemId) {
-                return systemOptions(systemId);
+                return _systemOptions(systemId);
             },
             systemCategoryOptions: function (systemId, categoryId) {
-                return systemCategoryOptions(systemId, categoryId);
+                return _systemCategoryOptions(systemId, categoryId);
             },
             categoryOptions: function (categoryId) {
-                return categoryOptions(categoryId);
+                return _categoryOptions(categoryId);
             },
             selectedSystem: function () {
-                return systems[_systemId];
+                return _systems[_systemId];
             },
             selectedCategory: function () {
-                return categories[_categoryId];
+                return _categories[_categoryId];
             },
             selectedOption: function () {
-                return options[_optionId];
+                return _options[_optionId];
             },
             setSystem: function (systemId) {
                 _systemId = systemId;

@@ -127,4 +127,7 @@ angular.module('pehratekcomApp')
 
             return len === 0 || categories[len - 1].id === $scope.selectedCategoryId;
         };
+    }])
+    .controller('PriceListCtrl', ['$scope', 'products', function ($scope, products) {
+        $scope.optionsByCategory = products.optionsByCategory();
     }]);

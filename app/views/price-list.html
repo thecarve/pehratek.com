@@ -25,7 +25,10 @@
 </div>
 
 
-<ul class="list-unstyled" ng-repeat="option in options">
-    <li><h4>{{option.title}}</h4>({{option.name}})- <strong>{{option.price | currency}}</strong>
-        <hr/></li>
+<ul class="list-unstyled" ng-controller="PriceListCtrl">
+    <span ng-repeat="category in optionsByCategory">
+        <h1>{{category.title}}</h1>
+        <li ng-repeat="option in category.options"><h4>{{option.title}}</h4>({{option.name}})-
+            <strong>{{option.price | currency}}</strong><hr/></li>
+    </span>
 </ul>
