@@ -75,7 +75,8 @@
         <strong>Options</strong>
         <p ng-repeat="option in cart.options()"><small>{{option.title}} {{option.price | currency}}</small></p>
         <p class="btn btn-primary"><small>Total: {{cart.price() | currency}}</small></p>
-        <p ng-click="openOrderForm()" class="btn btn-primary"><small>Place Order</small></p>
+        <hr/>
+        <p ng-click="openOrderForm()" class="btn btn-warning"><small>Email Us Your Configuration</small></p>
 
         <a ng-click="cart.removeCategoryOptions(selectedCategoryId)"
            href="#/product/{{selectedSystemId + 1}}/option/{{nextCategory() + 1}}">

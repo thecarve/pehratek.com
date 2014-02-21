@@ -1,8 +1,9 @@
 <div class="modal-header">
-    <h1>{{selectedOption.title}} <small>{{selectedOption.name}}</small></h1>
+    <button class="btn btn-primary pull-right" ng-click="ok()">Close</button>
+    <h3>{{selectedOption.title}} <small> - {{selectedOption.name}}</small></h3>
 </div>
 <div class="modal-body">
-    <h3>{{selectedOption.price | currency}}</h3>
+    <h4>{{selectedOption.price | currency}}</h4>
     <p>{{selectedOption.desc}}</p>
 
     <ul ng-repeat="img in selectedOption.imgUrl" class="list-inline">
@@ -12,6 +13,6 @@
     </ul>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">OK</button>
-    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="ok()">Close</button>
+    <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
 </div>
