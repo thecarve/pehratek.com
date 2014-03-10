@@ -1,16 +1,25 @@
 <div class="modal-header">
     <button class="btn btn-primary pull-right" ng-click="ok()">Close</button>
-    <h3>{{selectedOption.title}} <small> - {{selectedOption.name}}</small></h3>
+    <h3>{{selectedOption.title}} <small> - {{selectedOption.name | uppercase}}</small></h3>
 </div>
 <div class="modal-body">
     <h4>{{selectedOption.price | currency}}</h4>
-    <p>{{selectedOption.desc}}</p>
+    <p>{{selectedOption.descText}}</p>
+    <ul ng-repeat="item in selectedOption.desc">
+        <li>{{item}}</li>
+    </ul>
 
     <ul ng-repeat="img in selectedOption.imgUrl" class="list-inline">
         <li>
-            <img class="img-responsive" src="{{img}}" alt="{{selectedOption.title}}"/>
+            <img class="img-responsive" src="{{img}}" alt="{{selectedOption.title}}" style="width: 60%;"/>
         </li>
     </ul>
+
+    <h3>{{selectedOption.specsText}}</h3>
+    <ul ng-repeat="item in selectedOption.specs">
+        <li>{{item}}</li>
+    </ul>
+
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" ng-click="ok()">Close</button>

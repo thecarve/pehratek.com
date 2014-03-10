@@ -15,8 +15,8 @@
             <ul class="nav nav-pills navbar-right margin-top-10">
                 <li><a href="#/">Home</a></li>
                 <li><a href="#/builder">Build Your System</a></li>
-                <li class="active"><a href="#/price-list">Price List</a></li>
-                <li><a href="#/resources">Resources</a></li>
+                <li><a href="#/price-list">Price List</a></li>
+                <li class="active"><a href="#/resources">Resources</a></li>
                 <li><a href="#/contact">Contact</a></li>
             </ul>
 
@@ -25,12 +25,15 @@
     </div>
 </div>
 
+    <div class="container">
+        <h2>VRA Installation and Documentation</h2>
 
-<ul class="list-unstyled" ng-controller="PriceListCtrl">
-    <span ng-repeat="category in optionsByCategory">
-        <hr/>
-        <h3 style="color: #0556A4;">{{category.title}}</h3>
-        <li ng-repeat="option in category.options"><h4>{{option.title}}</h4>({{option.name | uppercase}})-
-            <strong>{{option.price | currency}}</strong></li>
-    </span>
-</ul>
+        <ul>
+            <li><a href="resources/FREQ-CHANGING-4CH.pdf" target="_blank">Video VRA Installation and Documentation</a></li>
+            <li>XM-1000 Installation and Documentation</li>
+            <li>WR-500 Installation and Documentation</li>
+        </ul>
+    </div>
+
+
+

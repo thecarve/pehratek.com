@@ -41,7 +41,7 @@
         <div class="row">
             <ul id="option-items" class="list-inline">
                 <li ng-repeat="option in systemCategoryOptions()" class="text-center" style="padding: 0 40px;">
-                    <div class="row"><strong>{{option.title}}</strong> <br/> ({{option.name}}) - <strong>{{option.price | currency}}</strong></div>
+                    <div class="row"><strong>{{option.title}}</strong> <br/> ({{option.name | uppercase}}) - <strong>{{option.price | currency}}</strong></div>
 
                     <div class="row margin-top-20">
                         <img class="img-responsive thumbnail" ng-repeat="img in option.imgUrl | limitTo: 1" src="{{img}}" alt="{{option.title}}" style="width: 150px; margin: auto;"/>

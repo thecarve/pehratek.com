@@ -37,7 +37,7 @@ angular.module('pehratekcomApp')
                 imageUrl: [
                     'images/products/xm5000.png'
                 ],
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.'
+                desc: ''
             },
             {
                 id: 2,
@@ -48,7 +48,7 @@ angular.module('pehratekcomApp')
                 imageUrl: [
                     'images/products/vds1500.png'
                 ],
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.'
+                desc: ''
             }
         ];
 
@@ -122,7 +122,12 @@ angular.module('pehratekcomApp')
                 title: 'Wireless Video Centering Monitor',
                 category: 0, //'centeringlcdMonitor'
                 price: 1498,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3',
+                    'Item4'
+                    ],
                 imgUrl: [
                     'images/products/vds500/vds500.png'
                 ]
@@ -132,7 +137,11 @@ angular.module('pehratekcomApp')
                 title: 'Wireless Video Centering Monitor',
                 category: 1, //'centeringlcdMonitor'
                 price: 1498,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/vds510/vds510.png'
                 ]
@@ -143,7 +152,11 @@ angular.module('pehratekcomApp')
                 title: 'Animated Low Profile Centering Box',
                 category: 1, //'centeringBox',
                 price: 299,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/lpa440/lpa440.png'
                 ]
@@ -154,7 +167,11 @@ angular.module('pehratekcomApp')
                 title: 'Lighted Duck Low Profile Centering Box',
                 category: 1, //'centeringBox',
                 price: 299,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/lpv300/lpv300.png'
                 ]
@@ -165,7 +182,11 @@ angular.module('pehratekcomApp')
                 title: 'Lighted Duck Low Profile Centering Box',
                 category: 1, //'centeringBox',
                 price: 129,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/lpc200/lpc200.png'
                 ]
@@ -176,7 +197,11 @@ angular.module('pehratekcomApp')
                 title: 'Animated Low Profile Centering Box',
                 category: 1, //'centeringBox',
                 price: 259,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/lpa400/lpa400.png'
                 ]
@@ -187,7 +212,11 @@ angular.module('pehratekcomApp')
                 title: 'Sound Module',
                 category: 2, //sound modules
                 price: 299,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/vdosnd/vdosnd.png'
                 ]
@@ -198,7 +227,17 @@ angular.module('pehratekcomApp')
                 title: 'Video VRA Installation Kit',
                 category: 3, //'installationKit',
                 price: 79,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                descText: 'This complete kit includes all of the items necessary to install either our Wired or Wireless VRA Systems . Each kit includes the following items:',
+                desc: [
+                    'Two L-Shaped mounting brackets for installing the VRA boxes to the wall of your sound booth or testing room.',
+                    'Power and centering box cables and connectors.',
+                    'Ten wire ties.',
+                    'Ten adhesive clips.',
+                    'L-Shaped Mounting Brackets/mounting screws',
+                    'Velcro strips',
+                    '6 Foot extension cable for centering box',
+                    '15 Foot extension cable for power'
+                ],
                 imgUrl: [
                     'images/products/insvid/insvid.png'
                 ]
@@ -209,7 +248,11 @@ angular.module('pehratekcomApp')
                 title: 'XM-5000 Installation Kit',
                 category: 3, //'installationKit',
                 price: 89,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/ins5000/ins5000.png'
                 ]
@@ -220,7 +263,11 @@ angular.module('pehratekcomApp')
                 title: 'Flush Mount Bracket',
                 category: 4, //'cornermountingBracket',
                 price: 79,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Three Direction Adjustable',
+                    'Tilt/ Swivel/ Up-Down',
+                    '4” Depth 30 Degree Range'
+                ],
                 imgUrl: [
                     'images/products/ctrmt/ctrmt.png'
                 ]
@@ -231,7 +278,11 @@ angular.module('pehratekcomApp')
                 title: 'Dual Arm Mounting Bracket',
                 price: 59,
                 category: 5, //'dualarmmountingBracket',
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/dua001/dua001.png'
                 ]
@@ -242,7 +293,11 @@ angular.module('pehratekcomApp')
                 title: 'IR Signal Booster',
                 category: 6, //'irboosterRepeater',
                 price: 149,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/irrt200/irrt200.png'
                 ]
@@ -253,7 +308,13 @@ angular.module('pehratekcomApp')
                 title: 'Rolling Adjustable Stand',
                 category: 7, //'rollingStand',
                 price: 399,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Easy to install and moveable throughout the testing area.',
+                    'Foot lever allows for raising or lowering height',
+                    'Dimensions 21” L x 19” W x 46” H (14” Height adjustment)',
+                    'Lockable casters to prevent movement',
+                    'Head tilts 40 degrees up or down {Cochlear Implant Testing}'
+                ],
                 imgUrl: [
                     'images/products/rolstan/rolstan.png'
                 ]
@@ -264,7 +325,11 @@ angular.module('pehratekcomApp')
                 title: 'Desktop Stand',
                 category: 8, //'desktopStand',
                 price: 129,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    '16” High Desk Top Stand',
+                    'Adjustable Tilting Bracket',
+                    'Sturdy Black Plastic Construction'
+                ],
                 imgUrl: [
                     'images/products/dsk10/dsk10.png'
                 ]
@@ -275,9 +340,33 @@ angular.module('pehratekcomApp')
                 title: 'VDS-2000 Speaker Console',
                 category: 9, //'speakerConsole',
                 price: 4475,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Combination Sound Field Speaker + Video VRA',
+                    'Low Profile – Mounts in corners, 10 inch depth',
+                    'Meets ANSI Specifications',
+                    'Black or white in color',
+                    'Optional pedestal',
+                    'Uses drop in z-clips to mount to wall',
+                    'Space saving, great appearance',
+                    'Video VRA monitor tils up/down side/side',
+                    'Hide cords in path channels',
+                    'Removable grill cover for cleaning'
+                ],
+                specsText: 'Specifications',
+                specs: [
+                    'ANSI: Audiometric high efficiency meeting ANSI S3.6-1996',
+                    'Specs: 90 dB HTL Speech Minimum @ 1 meter in a 6′ x 6′ sound room when driven by an audiometer with a 10 watt amplifier.',
+                    'Driver: JBL 8″ Coaxial Model SP8CI (10 Ounce Magnet)',
+                    'Frequency Response: 250-4000 Hz +/- 3.0 dB',
+                    'Impedance: 8 Ohms',
+                    'Crossover Frequency: 3000 Hz',
+                    'Power Max: 30 Watt Continous',
+                    'Connector: Gold terminals on back',
+                    'Mounting: Z-Clips Drop-In Mounting'
+                ],
                 imgUrl: [
-                    'images/products/vds2000/vds2000.png'
+                    'images/products/vds2000/vds2000.png',
+                    'images/products/vds2000/2.jpg'
                 ]
             },
             {
@@ -286,7 +375,11 @@ angular.module('pehratekcomApp')
                 title: 'VDS-2500 Speaker Console',
                 category: 9, //'speakerConsole',
                 price: 4675,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    'Item1',
+                    'Item2',
+                    'Item3'
+                ],
                 imgUrl: [
                     'images/products/vds2500/vds2500.png'
                 ]
@@ -296,7 +389,6 @@ angular.module('pehratekcomApp')
                 name: 'talkback',
                 title: 'Talk Back Intercom System',
                 category: 11, //'legacy',
-                price: 0,
                 desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
@@ -307,7 +399,6 @@ angular.module('pehratekcomApp')
                 name: 'ir7000',
                 title: 'IR-7000 Animitronic VRA (INFRA-Red) w/Wireless Remote',
                 category: 11, //'legacy',
-                price: 0,
                 desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
@@ -319,7 +410,12 @@ angular.module('pehratekcomApp')
                 title: 'Video VRA To Mounting Bracket',
                 category: 10, //'topmountBracket',
                 price: 89,
-                desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et volutpat odio, nec posuere dolor. Nulla a massa massa. Praesent in cursus diam, eu vulputate lectus. Fusce tincidunt eros eget lorem faucibus volutpat. Morbi eu pretium massa, id dapibus felis. In eget sodales ante. Nam ut felis sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vestibulum tellus eu neque hendrerit, ut tempor diam tempor.',
+                desc: [
+                    '15” Bright LCD Centering Box for Video VRA',
+                    'Includes Standard Flush Mounting Bracket',
+                    'Includes 4 Channel Wireless Remote Control Upgrade',
+                    'Interesting Graphic Images Attract Attention'
+                ],
                 imgUrl: [
                     'images/products/std500/std500.png'
                 ]
@@ -329,7 +425,6 @@ angular.module('pehratekcomApp')
                 name: 'xm1000',
                 title: 'XM-1000 Wireless VRA',
                 category: 11, //'legacy',
-                price: 0,
                 desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
@@ -341,7 +436,6 @@ angular.module('pehratekcomApp')
                 title: 'WRS-500/WRS-500 Quad WiredD VRA',
                 category: 11, //'legacy',
                 price: 0,
-                desc: 'No longer available.',
                 imgUrl: [
                     'images/logo.png'
                 ]

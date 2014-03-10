@@ -45,6 +45,10 @@ angular.module('pehratekcomApp', [
                 templateUrl: 'views/price-list.html',
                 controller: 'MainCtrl'
             })
+            .when('/resources', {
+                templateUrl: 'views/resources.html',
+                controller: 'MainCtrl'
+            })
 
             .otherwise({
                 templateUrl: '404.html'
