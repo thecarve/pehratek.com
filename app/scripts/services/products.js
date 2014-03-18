@@ -123,10 +123,9 @@ angular.module('pehratekcomApp')
                 category: 0, //'centeringlcdMonitor'
                 price: 1498,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3',
-                    'Item4'
+                    '15” LCD Wireless (RF)Centering Panel for the VIDEO VRA',
+                    'Size: (14.5”x10.8”x1.7”)',
+                    'Includes Flush Mounting Bracket and Plug-In Power Supply and upgrade to Four Button Remote Control when ordered as a system.'
                     ],
                 imgUrl: [
                     'images/products/vds500/vds500.png'
@@ -138,9 +137,10 @@ angular.module('pehratekcomApp')
                 category: 1, //'centeringlcdMonitor'
                 price: 1498,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    '15” LCD Wireless Centering Panel for the VIDEO VRA',
+                    'Size: (14.5”x10.8”x1.7”)',
+                    'Designed to work with VDS-1500 Infra-Red System',
+                    'Includes Flush Mounting Bracket and 10 foot extension cable.'
                 ],
                 imgUrl: [
                     'images/products/vds510/vds510.png'
@@ -153,9 +153,12 @@ angular.module('pehratekcomApp')
                 category: 1, //'centeringBox',
                 price: 299,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'Animated dog centering toy that moves its head and tail',
+                    'illuminated by a high brightness LEDs to attract the child’s attention',
+                    'Size: (4 1/5”D by 6 1/2” H by 7 1/” W)',
+                    'Easily mounts to wall using keyholes or double back tape',
+                    'Includes upgrade to 4 button Remote Control when ordered as a system.',
+                    'STAND-ALONE WIRELESS'
                 ],
                 imgUrl: [
                     'images/products/lpa440/lpa440.png'
@@ -168,9 +171,12 @@ angular.module('pehratekcomApp')
                 category: 1, //'centeringBox',
                 price: 299,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    ' Low Profile STAND-ALONE wireless centering box for the Video VRA',
+                    'Includes AC power pack',
+                    'upgrade to 4 Button Remote Control to operate all units when ordered as a system',
+                    'Bright LED illumination',
+                    'Size: (4 1/5” D x 6 1/2” H x 7 1/5” W)',
+                    'STAND-ALONE WIRELESS'
                 ],
                 imgUrl: [
                     'images/products/lpv300/lpv300.png'
@@ -183,9 +189,10 @@ angular.module('pehratekcomApp')
                 category: 1, //'centeringBox',
                 price: 129,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'Slim-line compact design hugs the wall with dimensions of (4 1/5” D x 6 1/2” H x 7 1/5”W)',
+                    'Wide viewing angle from all sides',
+                    'NEW BRITE-LITE LED LIGHTING!',
+                    'Includes 10 foot cable.'
                 ],
                 imgUrl: [
                     'images/products/lpc200/lpc200.png'
@@ -198,9 +205,9 @@ angular.module('pehratekcomApp')
                 category: 1, //'centeringBox',
                 price: 259,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'Animated Toy Dog Centering Box',
+                    'High brightness LED lighting and moving toy figure that moves its head and tail to attract the childs attention',
+                    '4.5 Depth, 6.5" High, 7.5" wide'
                 ],
                 imgUrl: [
                     'images/products/lpa400/lpa400.png'
@@ -213,9 +220,7 @@ angular.module('pehratekcomApp')
                 category: 2, //sound modules
                 price: 299,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'VDS-1000 WIRELESS VIDEO VRA can be ordered with Sound Option!  Every image is accompanied with a brief cartoon sound or noise to attract attention and add emphasis to the reinforcer.  Adjustable volume levels and can be switched off when not needed.'
                 ],
                 imgUrl: [
                     'images/products/vdosnd/vdosnd.png'
@@ -249,9 +254,11 @@ angular.module('pehratekcomApp')
                 category: 3, //'installationKit',
                 price: 89,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'Covers  Most Installation Requirements',
+                    '2-12 foot power extension cables',
+                    '1-15 foot IR sensor extension cable',
+                    '2- Corner mounting brackets',
+                    '10-Adhesive mounting tabs/wire ties/screws'
                 ],
                 imgUrl: [
                     'images/products/ins5000/ins5000.png'
@@ -279,9 +286,10 @@ angular.module('pehratekcomApp')
                 price: 59,
                 category: 5, //'dualarmmountingBracket',
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'Sturdy dual-arm mounting bracket',
+                    'Extends up to 8"/Folds flat to wall',
+                    'Easy installation',
+                    'Can be used with all products'
                 ],
                 imgUrl: [
                     'images/products/dua001/dua001.png'
@@ -294,9 +302,7 @@ angular.module('pehratekcomApp')
                 category: 6, //'irboosterRepeater',
                 price: 149,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'IRsignal booster for large booths or set ups with obstructions to the glass window where the remote control is pointed.  Consists of: IR repeater, power supply, and two IR relay sensors to flood the room with Infra-red signals.  Can be mounted anywhere in booth with velcro or double back tape. '
                 ],
                 imgUrl: [
                     'images/products/irrt200/irrt200.png'
@@ -341,28 +347,20 @@ angular.module('pehratekcomApp')
                 category: 9, //'speakerConsole',
                 price: 4475,
                 desc: [
-                    'Combination Sound Field Speaker + Video VRA',
-                    'Low Profile – Mounts in corners, 10 inch depth',
-                    'Meets ANSI Specifications',
-                    'Black or white in color',
-                    'Optional pedestal',
-                    'Uses drop in z-clips to mount to wall',
-                    'Space saving, great appearance',
-                    'Video VRA monitor tils up/down side/side',
-                    'Hide cords in path channels',
-                    'Removable grill cover for cleaning'
+                    'A combination of VIDEO VRA RF system and sound field speaker system can be easily mounted in the corners of the sound room for a low profile solution to pediatric testing needs.  The 8" loudspeaker develops 90 dB and meets ANSI specifications.  The cabinet is easily mounted into the corners of the sound room using drop in Z-Clips to mount to the walls. The cabinet hides all cords and offers a removable grill cover for easy cleaning.'
                 ],
                 specsText: 'Specifications',
                 specs: [
                     'ANSI: Audiometric high efficiency meeting ANSI S3.6-1996',
                     'Specs: 90 dB HTL Speech Minimum @ 1 meter in a 6′ x 6′ sound room when driven by an audiometer with a 10 watt amplifier.',
-                    'Driver: JBL 8″ Coaxial Model SP8CI (10 Ounce Magnet)',
+                    'Driver: High Compliance 8" Full Range Loudspeaker Coaxial Model SP8CI (10 Ounce Magnet)',
                     'Frequency Response: 250-4000 Hz +/- 3.0 dB',
                     'Impedance: 8 Ohms',
                     'Crossover Frequency: 3000 Hz',
                     'Power Max: 30 Watt Continous',
                     'Connector: Gold terminals on back',
-                    'Mounting: Z-Clips Drop-In Mounting'
+                    'Mounting: Z-Clips Drop-In Mounting',
+                    'Controlled by RF signals'
                 ],
                 imgUrl: [
                     'images/products/vds2000/vds2000.png',
@@ -376,12 +374,24 @@ angular.module('pehratekcomApp')
                 category: 9, //'speakerConsole',
                 price: 4675,
                 desc: [
-                    'Item1',
-                    'Item2',
-                    'Item3'
+                    'A combination of VIDEO VRA IR system and sound field speaker system can be easily mounted in the corners of the sound room for a low profile solution to pediatric testing needs.  The 8" loudspeaker develops 90 dB and meets ANSI specifications.  The cabinet is easily mounted into the corners of the sound room using drop in Z-Clips to mount to the walls. The cabinet hides all cords and offers a removable grill cover for easy cleaning.'
+                ],
+                specsText: 'Specifications',
+                specs: [
+                    'ANSI: Audiometric high efficiency meeting ANSI S3.6-1996',
+                    'Specs: 90 dB HTL Speech Minimum @ 1 meter in a 6′ x 6′ sound room when driven by an audiometer with a 10 watt amplifier.',
+                    'Driver: High Compliance 8" Full Range Loudspeaker Coaxial Model SP8CI (10 Ounce Magnet)',
+                    'Frequency Response: 250-4000 Hz +/- 3.0 dB',
+                    'Impedance: 8 Ohms',
+                    'Crossover Frequency: 3000 Hz',
+                    'Power Max: 30 Watt Continous',
+                    'Connector: Gold terminals on back',
+                    'Mounting: Z-Clips Drop-In Mounting',
+                    'Controlled by IR Signals'
                 ],
                 imgUrl: [
-                    'images/products/vds2500/vds2500.png'
+                    'images/products/vds2000/vds2000.png',
+                    'images/products/vds2000/2.jpg'
                 ]
             },
             {
@@ -411,10 +421,8 @@ angular.module('pehratekcomApp')
                 category: 10, //'topmountBracket',
                 price: 89,
                 desc: [
-                    '15” Bright LCD Centering Box for Video VRA',
-                    'Includes Standard Flush Mounting Bracket',
-                    'Includes 4 Channel Wireless Remote Control Upgrade',
-                    'Interesting Graphic Images Attract Attention'
+                    'Add additional reinforcer box above the VIDEO VRA monitor to alternate reinforcement choices',
+                    'Bracket uses same mounting holes to piggy-back both units so that they are aligned in position'
                 ],
                 imgUrl: [
                     'images/products/std500/std500.png'
