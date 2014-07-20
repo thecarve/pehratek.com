@@ -84,9 +84,7 @@ angular.module('pehratekcomApp')
         $scope.selectedOption = products.selectedOption();
 
         $scope.cart = cart;
-        if (!$scope.cart.getSystem()) {
-            $scope.cart.setSystem($scope.selectedSystem);
-        }
+        $scope.cart.setSystem($scope.selectedSystem);
 
         $scope.systems = products.allSystems();
         $scope.categories = products.allCategories();

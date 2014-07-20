@@ -27,8 +27,10 @@ angular.module('pehratekcomApp')
 
         return {
             setSystem: function (system) {
-                _system = system;
-                _options = [];
+                if (system != _system) {
+                    _system = system;
+                    _options = [];
+                }
             },
             getSystem: function () {
                 return _system;
