@@ -401,7 +401,7 @@ angular.module('pehratekcomApp')
                 category: 11, //'legacy',
                 desc: 'No longer available.',
                 imgUrl: [
-                    'images/logo.png'
+                    'images/products/legacy/talkbackmonitor/talkbackmonitor.jpg'
                 ]
             },
             {
@@ -409,9 +409,9 @@ angular.module('pehratekcomApp')
                 name: 'ir7000',
                 title: 'IR-7000 Animitronic VRA (INFRA-Red) w/Wireless Remote',
                 category: 11, //'legacy',
-                desc: 'No longer available.',
+                desc: 'Parts: Remote (WT-7001), Power Pack (ADA-019), IR-Sensor (IR-SENS)',
                 imgUrl: [
-                    'images/logo.png'
+                    'images/products/legacy/ir7000/ir7000.jpg'
                 ]
             },
             {
@@ -433,19 +433,20 @@ angular.module('pehratekcomApp')
                 name: 'xm1000',
                 title: 'XM-1000 Wireless VRA',
                 category: 11, //'legacy',
-                desc: 'No longer available.',
+                desc: 'Power Pack (ADA-019), Remote (XM-1001), Cable (CAB-004) Remote Control (XM-1001)',
                 imgUrl: [
-                    'images/logo.png'
+                    'images/products/legacy/xm1000vra/xm1000vra.jpg'
                 ]
             },
             {
                 id: 20,
                 name: 'wrs500',
-                title: 'WRS-500/WRS-500 Quad WiredD VRA',
+                title: 'WRS-500/WRS-500 Quad Wired VRA',
                 category: 11, //'legacy',
                 price: 0,
+                desc: 'Power Pack (ADA-019) Cable (CAB-004) Control Console (CON-001)',
                 imgUrl: [
-                    'images/logo.png'
+                    'images/products/legacy/wrs500/wrs500.jpg'
                 ]
             }
         ];
