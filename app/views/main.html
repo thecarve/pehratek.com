@@ -200,7 +200,13 @@
     <h2 class="text-center text-primary">Products Categories</h2>
     <hr/>
 
-    <ul class="list-inline text-center">
+    <style>
+        .custom-categories li {
+            padding: 5px;
+        }
+    </style>
+
+    <ul class="list-inline text-center custom-categories">
         <li ng-repeat="category in categories">
             <a href="" ng-click="setCategoryId(category.id)">
                 <button class="btn btn-primary margin-top-20 category-btn">{{category.title}}</button>
