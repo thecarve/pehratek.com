@@ -414,7 +414,7 @@ angular.module('pehratekcomApp')
                 name: 'ir7000',
                 title: 'IR-7000 Animitronic VRA (INFRA-Red) w/Wireless Remote',
                 category: 11, //'legacy',
-                desc: 'Parts: Remote (WT-7001), Power Pack (ADA-019), IR-Sensor (IR-SENS)',
+                desc: 'Parts available:  Remote (WT-7001), Power Pack (ADA-019), IR-Sensor (IR-SENS)',
                 imgUrl: [
                     'images/products/legacy/ir7000/ir7000.jpg'
                 ]
@@ -438,7 +438,7 @@ angular.module('pehratekcomApp')
                 name: 'xm1000',
                 title: 'XM-1000 Wireless VRA',
                 category: 11, //'legacy',
-                desc: 'Power Pack (ADA-019), Remote (XM-1001), Cable (CAB-004) Remote Control (XM-1001)',
+                desc: 'Parts available: Power Pack (ADA-019), Remote (XM-1001), Cable (CAB-004) Remote Control (XM-1001)',
                 imgUrl: [
                     'images/products/legacy/xm1000vra/xm1000vra.jpg'
                 ]
@@ -459,8 +459,18 @@ angular.module('pehratekcomApp')
                 name: 'kidscam',
                 title: 'KID-CAM VRA VISION SYSTEM',
                 category: 12, //'accessories',
-                price: 0,
-                desc: 'KID-CAM can be used to monitor the child’s head turn and facial direcon during VRA tesng.',
+                price: 799,
+                desc: [
+                    'KID-CAM can be used to monitor the child’s head turn and facial direcon during VRA tesng.',
+                    'Observe Children’s Visual Orientaon During VRA Tesng',
+                    '7” Color LCD Monitor –Split Screen',
+                    'Displays Both Right and Le$ Views of Children’s Face Clearly',
+                    'Subminiature Low-Light Level Cameras are Inconspicuous',
+                    'Ideal for Large Booths or Difficult Viewing Angles',
+                    'Easily Installed (two cables)',
+                    'Helps Train Students to See Head Turn',
+                    'Prevents Clinician From Distracng Child During The Test'
+                ],
                 imgUrl: [
                     'images/products/kidscam/KID_CAM.jpg'
                 ]
@@ -485,7 +495,8 @@ angular.module('pehratekcomApp')
             [13],               //desktopStand - 8
             [14, 15],           //speakerConsole -9
             [18],               //topmountbracket
-            [16, 17, 19, 20]    // legacy
+            [16, 17, 19, 20],   // legacy
+            [21]                //accessories
         ];
 
         _optionsByCategory = function () {
