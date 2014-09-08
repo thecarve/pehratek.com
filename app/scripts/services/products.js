@@ -112,6 +112,11 @@ angular.module('pehratekcomApp')
                 id: 11,
                 name: 'legacyProduct',
                 title: 'Legacy Products'
+            },
+            {
+                id: 12,
+                name: 'accessories',
+                title: 'Accessories'
             }
         ];
 
@@ -447,6 +452,17 @@ angular.module('pehratekcomApp')
                 desc: 'Power Pack (ADA-019) Cable (CAB-004) Control Console (CON-001)',
                 imgUrl: [
                     'images/products/legacy/wrs500/wrs500.jpg'
+                ]
+            },
+            {
+                id: 21,
+                name: 'kidscam',
+                title: 'KID-CAM VRA VISION SYSTEM',
+                category: 12, //'accessories',
+                price: 0,
+                desc: 'KID-CAM can be used to monitor the child’s head turn and facial direcon during VRA tesng.',
+                imgUrl: [
+                    'images/products/kidscam/KID_CAM.jpg'
                 ]
             }
         ];
